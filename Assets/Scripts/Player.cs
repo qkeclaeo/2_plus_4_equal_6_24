@@ -18,12 +18,13 @@ public class Player : MonoBehaviour
 
     float deathCooldown = 0f;
     float invincibleCooldown = 0f;
-    Vector2 originalColliderOffset = Vector2.zero;
     float originalColliderSize = 0f;
+    
 
     bool isJump = false;
     bool canJump = true;
     bool isSlide = false;
+    bool isSliding = false;
     bool isDead = false;
 
     GameManager gameManager;
@@ -44,7 +45,6 @@ public class Player : MonoBehaviour
 
         if (_circleCollider != null)
         {
-            originalColliderOffset = _circleCollider.offset;
             originalColliderSize = _circleCollider.radius;
         }
         else Debug.LogError($"{gameObject.name}의 서클콜라이더를 찾을 수 없습니다.");
@@ -91,19 +91,26 @@ public class Player : MonoBehaviour
 
         if (isSlide)
         {
-            _circleCollider.offset = new Vector2(0f, -0.3f);
+            if(!isSliding)
+            {
+                transform.position += Vector3.down * 0.25f;
+                Debug.Log("위치변경! 아래로!");
+            }
+            isSliding = true;
             _circleCollider.radius = 0.25f;
         }
         else if (!isSlide)
         {
-            _circleCollider.offset = originalColliderOffset;
+            if (isSliding)
+            {
+                transform.position += Vector3.up * 0.25f;
+                Debug.Log("위치변경! 위로!");
+            }
+            isSliding = false;
             _circleCollider.radius = originalColliderSize;
         }
 
         _rigidbody.velocity = velocity;
-
-        float angle = Mathf.Clamp((_rigidbody.velocity.y * 10f), -90, 90);
-        transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
     private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
@@ -113,28 +120,15 @@ public class Player : MonoBehaviour
             canJump = true;
             Debug.Log("점프 가능!");
         }
+    }
 
-        if (godMode || isDead) return; //갓모드거나 죽었다면 계산 안함
+    public void DecreaseHp(float value)
+    {
+        //체력변동 동작
+    }
 
-        if (collision.gameObject.tag == "Obstacle" && invincibleCooldown > 0) return; //장애물이랑 충돌했는데 무적시간이면 계산안함
-
-        int value = 0;
-        Obstacle obstacle = collision.gameObject.GetComponent<Obstacle>();
-
-        if (obstacle != null)
-        {
-            //장애물의 값을 받아 플레이어 체력에 합산하는 부분
-            value = 000;
-            HP += value;
-        }
-
-        /* 아이템의 값을 받아 플레이어 체력에 합산하는 부분(아이템 추가 이후 작동하도록 주석화)
-        Item item = collision.gameObject.GetComponent<Item>();
-        if(item != null)
-        {
-            value = 000;
-            HP += value;
-        }
-        */
+    public void SetSpeed(float value)
+    {
+        //속도변동 동작
     }
 }
