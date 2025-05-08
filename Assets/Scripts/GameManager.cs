@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private GameObject[] stage;
+    GameObject curStage;
     static GameManager gameManager;
     public static GameManager Instance { get { return gameManager; } }
 
@@ -24,9 +26,16 @@ public class GameManager : MonoBehaviour
         uiManager.UpdateScore(0);
     }
 
+    public void StageStart(int stage_num)
+    {
+        curStage.SetActive(false);
+        curStage = stage[stage_num - 1];
+        curStage.SetActive(true);
+        uiManager.UpdateScore(0);
+    }
+
     public void GameOver()
     {
-        Debug.Log("게임오버");
         uiManager.SetRestart();
     }
 
@@ -36,10 +45,9 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void AddScore(int score)
+    public void UpdateScore(int score)
     {
         currentScore += score;
-        Debug.Log("Score : " + currentScore);
         uiManager.UpdateScore(currentScore);
     }
 }
