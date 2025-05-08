@@ -6,45 +6,57 @@ public class Player : MonoBehaviour
 {
     Animator animator;
     Rigidbody2D _rigidbody;
+    CircleCollider2D _circleCollider;
 
-    public float flapForce = 6f;
-    public float forwardSpeed = 3f;
-    public bool isDead = false;
+    [Header("Player State")] //일단 다른데에서 쓸 수도 있으니 public으로 남겨둡니다.
+
+    public int HP = 100;
+    public float Speed = 3f;
+    public float JumpForce = 6f;
+
+    [SerializeField] private bool godMode = false;
+
     float deathCooldown = 0f;
+    float invincibleCooldown = 0f;
+    float originalColliderSize = 0f;
+    
 
-    bool isFlap = false;
-
-    public bool godMode = false;
+    bool isJump = false;
+    bool canJump = true;
+    bool isSlide = false;
+    bool isSliding = false;
+    bool isDead = false;
 
     GameManager gameManager;
 
-    // Start is called before the first frame update
     void Start()
     {
         gameManager = GameManager.Instance;
 
         animator = GetComponentInChildren<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
+        _circleCollider = GetComponent<CircleCollider2D>();
 
         if (animator == null)
-            Debug.LogError("아 오류났어0 애니메이터 ");
+            Debug.LogError($"{gameObject.name}의 애니메이터를 찾을 수 없습니다. ");
 
         if (_rigidbody == null)
-            Debug.LogError("리지드바디 오류라고요");
+            Debug.LogError($"{gameObject.name}의 리지드바디를 찾을 수 없습니다.");
+
+        if (_circleCollider != null)
+        {
+            originalColliderSize = _circleCollider.radius;
+        }
+        else Debug.LogError($"{gameObject.name}의 서클콜라이더를 찾을 수 없습니다.");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isDead)
         {
             if (deathCooldown <= 0)
             {
-                // 게임 재시작
-                if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-                {
-                    gameManager.RestartGame();
-                }
+                //게임오버 로직
             }
             else
             {
@@ -53,12 +65,11 @@ public class Player : MonoBehaviour
         }
         else
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-            {
+            invincibleCooldown -= Time.deltaTime;
+            if (canJump && Input.GetKeyDown(KeyCode.Space))
+                isJump = true;
 
-                isFlap = true;
-
-            }
+            isSlide = Input.GetKey(KeyCode.LeftShift);
         }
     }
 
@@ -69,36 +80,55 @@ public class Player : MonoBehaviour
         if (isDead) return;
 
         Vector3 velocity = _rigidbody.velocity;
-        velocity.x = forwardSpeed;
+        velocity.x = Speed;
 
-        if (isFlap)
+        if (isJump)
         {
-            velocity.y += flapForce;
-            isFlap = false;
-
+            velocity.y += JumpForce;
+            isJump = false;
+            canJump = false;
         }
+
+        if (isSlide)
+        {
+            if(!isSliding)
+            {
+                transform.position += Vector3.down * 0.25f;
+                Debug.Log("위치변경! 아래로!");
+            }
+            isSliding = true;
+            _circleCollider.radius = 0.25f;
+        }
+        else if (!isSlide)
+        {
+            if (isSliding)
+            {
+                transform.position += Vector3.up * 0.25f;
+                Debug.Log("위치변경! 위로!");
+            }
+            isSliding = false;
+            _circleCollider.radius = originalColliderSize;
+        }
+
         _rigidbody.velocity = velocity;
-
-
-        float angle = Mathf.Clamp((_rigidbody.velocity.y * 10f), -90, 90);
-        transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
     private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
     {
-        if (godMode) return;
-
-        if (isDead) return;
-
-        isDead = true;
-        deathCooldown = 1f;
-
-        animator.SetInteger("IsDie",1);
-
-        gameManager.GameOver();
-
-
+        if (collision.gameObject.tag == "BackGround") //바닥과 닿아야만 다시 점프 가능
+        {
+            canJump = true;
+            Debug.Log("점프 가능!");
+        }
     }
 
+    public void DecreaseHp(float value)
+    {
+        //체력변동 동작
+    }
 
+    public void SetSpeed(float value)
+    {
+        //속도변동 동작
+    }
 }
