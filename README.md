@@ -10,12 +10,13 @@ Unity 2022.3.17f1 엔진으로 제작한 횡스크롤 러닝 게임입니다.
 ```mermaid
 
 graph LR
-A[Start] --> B[Run]
-B --> C[Hit Obstacle → HP↓]
-B --> D[Evade (Jump/Slide)]
-C --> E[HP 0 → Dead]
+A[Start] --> B[Running]
+B --> C[Obstacle Hit]
+B --> D[Evade]
+C --> E[HP Zero]
 D --> B
 E --> F[Game Over]
+
 
 ```
 
