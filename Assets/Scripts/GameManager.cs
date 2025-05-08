@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
         if(player != null)
         {
             player.DecreaseHp(decreaseHpRate * Time.deltaTime);
-            if (player.CurrentHp <= 0)
+            if (player.currentHp <= 0)
             {
                 isOver = true;
                 GameOver();
