@@ -6,48 +6,74 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] stage;
+    [SerializeField] private GameObject player;
+
     GameObject curStage;
     static GameManager gameManager;
     public static GameManager Instance { get { return gameManager; } }
 
     private int currentScore = 0;
+    int currentStage = 1;        //재시작에 필요
 
-    UIManager uiManager;
-    public UIManager UIManager { get { return uiManager; } }
+    [SerializeField] private float maxSpeed = 10f;
+    [SerializeField] private float speedIncreaseRate = 0.1f;
+    [SerializeField] private float hpDecreaseRate = 1f;
 
+
+    bool isOver = false;
 
     private void Awake()
     {
         gameManager = this;
-        uiManager = FindObjectOfType<UIManager>();
     }
     public void Start()
     {
-        uiManager.UpdateScore(0);
+        StageStart(currentStage);
     }
 
     public void StageStart(int stage_num)
     {
+        currentStage = stage_num;
         curStage.SetActive(false);
-        curStage = stage[stage_num - 1];
+        curStage = stage[currentStage-1];
         curStage.SetActive(true);
-        uiManager.UpdateScore(0);
+        UIManager.Instance.UpdateScore(0);
     }
 
     public void GameOver()
     {
-        uiManager.SetRestart();
+        UIManager.Instance.GameOver();
     }
 
-
-    public void RestartGame()
+    public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        StageStart(currentStage);
     }
 
     public void UpdateScore(int score)
     {
         currentScore += score;
-        uiManager.UpdateScore(currentScore);
+        UIManager.Instance.UpdateScore(currentScore);
+    }
+
+    private void Update()
+    {
+        if (isOver) return;
+        if(player != null)
+        {
+            player.DecreaseHp(decreaseHpRate * Time.deltaTime);
+            if (player.CurrentHp <= 0)
+            {
+                isOver = true;
+                GameOver();
+            }
+        }
+        else
+        {
+            //예외처리
+            Debug.LogError("player is Null");
+        }
+        currentSpeed = Mathf.Min(maxSpeed, currentSpeed + speedIncreaseRate * Time.deltaTime);
+        player.SetSpeed(currentSpeed);
     }
 }
