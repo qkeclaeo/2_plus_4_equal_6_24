@@ -12,14 +12,14 @@ public class GameManager : MonoBehaviour
     static GameManager gameManager;
     public static GameManager Instance { get { return gameManager; } }
 
-    private int currentScore = 0;
+    int currentScore = 0;
     int currentStage = 1;        //재시작에 필요
 
     [SerializeField] private float maxSpeed = 10f;
     [SerializeField] private float speedIncreaseRate = 0.1f;
     [SerializeField] private float hpDecreaseRate = 1f;
 
-
+    float currentSpeed = 3f;
     bool isOver = false;
 
     private void Awake()
