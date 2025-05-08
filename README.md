@@ -79,7 +79,7 @@ E --> F[Game Over]
 ---
 
 ## 🖼️ 팀 로고
-![alt text](logo_2plus4equals6-1.png)
+![팀 로고](logo/logo_2plus4equals6.png)
 
 ```
 2+4=6명이조
