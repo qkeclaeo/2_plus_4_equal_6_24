@@ -11918,7 +11918,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916772cbbc781354292ab55a83eeac80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _stages: []
+  _stages:
+  - {fileID: 2126447337}
   _player: {fileID: 0}
   _maxSpeed: 10
   _speedIncreaseRate: 0.1

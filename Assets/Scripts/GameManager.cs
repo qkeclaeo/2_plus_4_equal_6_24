@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         Time.timeScale = 0f;
+        _curStage = _stages[0];     //재시작 테스트용
         //StageStart(_curStageNum);
     }
 
@@ -59,6 +60,7 @@ public class GameManager : MonoBehaviour
         if (_curStage != null)
         {
             _isGameOver = false;
+            Player.Init();
             _curStageNum = stageNum;
             _curStage.SetActive(false);
             _curStage = _stages[_curStageNum - 1];

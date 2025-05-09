@@ -94,6 +94,13 @@ public class Player : MonoBehaviour
         _originalColliderSize = _circleCollider.radius;
     }
 
+    public void Init()
+    {
+        _hp = _maxHp;
+        _speed = 3f;
+        transform.position = Vector3.up * 7.5f;
+    }
+
     void Update()
     {
         if (_isDead)
