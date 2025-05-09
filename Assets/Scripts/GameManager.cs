@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject[] stage;
-    [SerializeField] private GameObject player;
+    [SerializeField] private Player player;
 
     GameObject curStage;
     static GameManager gameManager;
@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         gameManager = this;
+        player = FindAnyObjectByType<Player>();
     }
     public void Start()
     {
@@ -61,8 +62,8 @@ public class GameManager : MonoBehaviour
         if (isOver) return;
         if(player != null)
         {
-            player.DecreaseHp(decreaseHpRate * Time.deltaTime);
-            if (player.currentHp <= 0)
+            player.DecreaseHp(hpDecreaseRate * Time.deltaTime);
+            if (player.HP <= 0)
             {
                 isOver = true;
                 GameOver();

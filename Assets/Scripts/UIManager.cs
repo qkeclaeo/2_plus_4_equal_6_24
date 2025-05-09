@@ -7,10 +7,18 @@ public class UIManager : MonoBehaviour
 
     
 {
+    public static UIManager Instance;
 
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI restartText;
-    // Start is called before the first frame update
+
+    private void Awake()
+    {
+        if (Instance = null)
+            Instance = this;
+        else Destroy(gameObject);
+    }
+
     void Start()
     {
         if (restartText == null)
@@ -30,5 +38,10 @@ public class UIManager : MonoBehaviour
     public void UpdateScore(int score)
     {
         scoreText.text = score.ToString();
+    }
+
+    public void GameOver()
+    {
+        //게임오버 UI표시
     }
 }
