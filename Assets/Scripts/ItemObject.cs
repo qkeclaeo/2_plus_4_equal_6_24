@@ -28,8 +28,10 @@ public class ItemObject : Object
     {
         Debug.Log($"Triggerd : {objectName}");
 
-        player = collision.GetComponent<Player>();
+        player = collision.gameObject.GetComponent<Player>();
         if (player == null) { return; }
+
+        base.DestroyTile(collision);
 
         switch(itemType)
         {
@@ -56,7 +58,7 @@ public class ItemObject : Object
                     Debug.Log("Heal");
                     const float healAmount = 10.0f;
 
-                    ChangePlayerHp(healAmount);
+                    GameManager.Instance.ChangePlayerHP(healAmount);
                 }
                 break;
             default:

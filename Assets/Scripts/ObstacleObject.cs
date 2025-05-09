@@ -27,7 +27,7 @@ public class ObstacleObject : Object
     public override void OnTriggerEnter2D(Collider2D collision)
     {
         // SpawnManager와 Arrow가 닿으면 날아옴. 확장성 고려해서 switch 문으로 구현.
-        if (collision.CompareTag("SpawnManager"))
+        if (collision.gameObject.CompareTag("SpawnManager"))
         {
             switch(obstacleType)
             {
@@ -45,7 +45,7 @@ public class ObstacleObject : Object
             }
         }
 
-        if (collision.tag != "Player") return;
+        if (!collision.gameObject.CompareTag("Player")) return;
         
         Debug.Log($"Triggerd : {objectName}");
         switch(obstacleType)
@@ -53,13 +53,13 @@ public class ObstacleObject : Object
             case ObstacleType.Normal:
                 {
                     Debug.Log("Normal");
-                    ChangePlayerHp(-normalDamage);
+                    GameManager.Instance.ChangePlayerHP(-normalDamage);
                 }
                 break;
             case ObstacleType.Arrow:
                 {
                     Debug.Log("Arrow");
-                    ChangePlayerHp(-arrowDamage);
+                    GameManager.Instance.ChangePlayerHP(-arrowDamage);
                 }
                 break;
             case ObstacleType.EndPoint:
@@ -72,6 +72,8 @@ public class ObstacleObject : Object
                 }
                 break;
         }
+
+        base.DestroyTile(collision);
     }
 
     private void MoveArrow()
