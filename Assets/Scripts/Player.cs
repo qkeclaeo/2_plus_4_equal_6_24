@@ -120,18 +120,4 @@ public class Player : MonoBehaviour
             canJump = true;
         }
     }
-
-    private void OnTriggerStay2D(Collider2D collision) //트리거 들어갔을때
-    {
-        if (collision.gameObject.name == "Opstacle") return;
-        Tilemap tilemap = collision.gameObject.GetComponent<Tilemap>(); //타일맵 받아오기
-        if (tilemap != null)
-        {
-            Vector3 hitPoint = collision.ClosestPoint(transform.position); //플레이어 위치와 가까운 위치 찾기
-            Vector3Int cellPosition = tilemap.WorldToCell(hitPoint); //월드위치에서 셀위치 찾기
-            if (tilemap.HasTile(cellPosition)) //해당 셀에 타일이 있다면
-                tilemap.SetTile(cellPosition, null); //해당 타일 지우기
-            Debug.Log($"{cellPosition}에 있는 {collision.gameObject.name}의 타일을 제거");
-        }
-    }
 }
