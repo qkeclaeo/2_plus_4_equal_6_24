@@ -34,10 +34,13 @@ public class GameManager : MonoBehaviour
 
     public void StageStart(int stage_num)
     {
-        currentStage = stage_num;
-        curStage.SetActive(false);
-        curStage = stage[currentStage-1];
-        curStage.SetActive(true);
+        if(curStage != null)
+        {
+            currentStage = stage_num;
+            curStage.SetActive(false);
+            curStage = stage[currentStage - 1];
+            curStage.SetActive(true);
+        }
         UIManager.Instance.UpdateScore(0);
     }
 
