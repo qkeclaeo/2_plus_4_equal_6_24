@@ -37,12 +37,12 @@ public class GameManager : MonoBehaviour
         curStage.SetActive(false);
         curStage = stage[currentStage-1];
         curStage.SetActive(true);
-        UIManager.Instance.UpdateScore(0);
+        //UIManager.Instance.UpdateScore(0);
     }
 
     public void GameOver()
     {
-        UIManager.Instance.GameOver();
+        //UIManager.Instance.GameOver();
     }
 
     public void Restart()
@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     public void UpdateScore(int score)
     {
         currentScore += score;
-        UIManager.Instance.UpdateScore(currentScore);
+        //UIManager.Instance.UpdateScore(currentScore);
     }
 
     private void Update()
@@ -61,8 +61,8 @@ public class GameManager : MonoBehaviour
         if (isOver) return;
         if(player != null)
         {
-            player.DecreaseHp(decreaseHpRate * Time.deltaTime);
-            if (player.currentHp <= 0)
+            //player.DecreaseHp(decreaseHpRate * Time.deltaTime);
+            //if (player.currentHp <= 0)
             {
                 isOver = true;
                 GameOver();
@@ -74,6 +74,6 @@ public class GameManager : MonoBehaviour
             Debug.LogError("player is Null");
         }
         currentSpeed = Mathf.Min(maxSpeed, currentSpeed + speedIncreaseRate * Time.deltaTime);
-        player.SetSpeed(currentSpeed);
+        //player.SetSpeed(currentSpeed);
     }
 }

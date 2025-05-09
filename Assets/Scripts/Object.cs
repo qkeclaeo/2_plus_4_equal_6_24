@@ -12,6 +12,6 @@ public abstract class Object : MonoBehaviour
 
     public void ChangePlayerHp(Player player, float number)
     {
-        // player.Hp += number;
+        player.HP += (int)number;
     }
 }

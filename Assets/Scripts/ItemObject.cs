@@ -65,19 +65,19 @@ public class ItemObject : Object
 
     private void Coin()
     {
-        GameManager.Instance.AddScore(1);
+        //GameManager.Instance.AddScore(1);
     }
 
     private void SpeedUp()
     {
         // 속도 증가
-        // player.speed += 10;
+        player.Speed += 10;
     }
 
     private void SpeedDown()
     {
         // 속도 감소
-        // player.speed -= 10;
+        player.Speed -= 10;
     }
 
     private void Heal()
