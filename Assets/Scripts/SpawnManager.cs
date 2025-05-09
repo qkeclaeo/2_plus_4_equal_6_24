@@ -6,6 +6,7 @@ public class SpawnManager : MonoBehaviour
     public static SpawnManager Instance { get { return spawnManager; } }
 
     [SerializeField] private int numBgCount = 5;
+    [SerializeField] private Transform playerTransform;
 
     private void Awake()
     {
@@ -14,6 +15,17 @@ public class SpawnManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Object 태그가 붙어있는 오브젝트(Item/Obstacle) 활성화
+        if (collision.CompareTag("Object"))
+        {
+            Debug.Log($"Object Activation : {collision.name}");
+            collision.gameObject.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        // Background 태그가 붙어있는 오브젝트 순환
         if (collision.CompareTag("BackGround"))
         {
             Debug.Log($"Triggerd : {collision.name}");
@@ -25,17 +37,12 @@ public class SpawnManager : MonoBehaviour
             collision.transform.position = pos;
             return;
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (!collision.gameObject.activeSelf)
+        
+        // Object 태그가 붙어있는 오브젝트(Item/Obstacle) 파괴
+        if (collision.CompareTag("Object"))
         {
-            collision.gameObject.SetActive(true);
-        }
-        else
-        {
+            Debug.Log($"Object Destroy : {collision.name}");
             Destroy(collision.gameObject);
-        }        
+        }
     }
 }
