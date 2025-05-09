@@ -24,23 +24,30 @@ public class ObstacleObject : Object
         objectName = gameObject.name;
     }
 
-    private void Update()
-    {
-        if (obstacleType == ObstacleType.Arrow)
-        {
-            if (gameObject.activeSelf)
-            {
-                MoveArrow();
-            }
-        }        
-    }
-
     public override void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log($"Triggerd : {objectName}");
+        // SpawnManager와 Arrow가 닿으면 날아옴. 확장성 고려해서 switch 문으로 구현.
+        if (collision.CompareTag("SpawnManager"))
+        {
+            switch(obstacleType)
+            {
+                case ObstacleType.Arrow:
+                    {
+                        Debug.Log("SpawnManager Arrow");
+                        MoveArrow();
+                        break;
+                    }
+                default:
+                    {
+                        Debug.Log("SpawnManager Default");
+                        break;
+                    }
+            }
+        }
 
         if (collision.tag != "Player") return;
-
+        
+        Debug.Log($"Triggerd : {objectName}");
         switch(obstacleType)
         {
             case ObstacleType.Normal:
