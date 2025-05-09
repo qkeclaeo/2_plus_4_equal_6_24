@@ -95,7 +95,6 @@ public class Player : MonoBehaviour
             if(!isSliding)
             {
                 transform.position += Vector3.down * 0.25f;
-                Debug.Log("위치변경! 아래로!");
             }
             isSliding = true;
             _circleCollider.radius = 0.25f;
@@ -105,7 +104,6 @@ public class Player : MonoBehaviour
             if (isSliding)
             {
                 transform.position += Vector3.up * 0.25f;
-                Debug.Log("위치변경! 위로!");
             }
             isSliding = false;
             _circleCollider.radius = originalColliderSize;
@@ -119,7 +117,6 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "BackGround") //바닥과 닿아야만 다시 점프 가능
         {
             canJump = true;
-            Debug.Log("점프 가능!");
         }
     }
 
