@@ -9,24 +9,25 @@ public class ObstacleObject : Object
         EndPoint
     }
 
-    private const float normalDamage = 10.0f;
-    private const float arrowDamage = 10.0f;
+    private float _normalDamage = 10.0f;
+    private float _arrowDamage = 10.0f;
 
-    private ObjectType objectType = ObjectType.Obstacle;
-    public ObjectType ObjectType { get => objectType; }
-    private string objectName;
-    public string ObjectName { get => objectName; }
+    private ObjectType _objectType = ObjectType.Obstacle;
+    public ObjectType ObjectType => _objectType;
 
-    [SerializeField] ObstacleType obstacleType;
+    private string _objectName;
+    public string ObjectName => _objectName;
+
+    [SerializeField] ObstacleType _obstacleType;
 
     private void Start()
     {
-        objectName = gameObject.name;
+        _objectName = gameObject.name;
     }
 
     private void Update()
     {
-        if (obstacleType == ObstacleType.Arrow)
+        if (_obstacleType == ObstacleType.Arrow)
         {
             if (gameObject.activeSelf)
             {
@@ -37,33 +38,37 @@ public class ObstacleObject : Object
 
     public override void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log($"Triggerd : {objectName}");
+        Debug.Log($"Triggerd : {_objectName}");
 
-        if (collision.tag != "Player") return;
-
-        switch(obstacleType)
+        if (collision.CompareTag("Player"))
         {
-            case ObstacleType.Normal:
-                {
-                    Debug.Log("Normal");
-                    ChangePlayerHp(-normalDamage);
-                }
-                break;
-            case ObstacleType.Arrow:
-                {
-                    Debug.Log("Arrow");
-                    ChangePlayerHp(-arrowDamage);
-                }
-                break;
-            case ObstacleType.EndPoint:
-                Debug.Log("EndPoint");
-                EndPoint();
-                break;
-            default:
-                {
-                    Debug.Log("Obstacle");
-                }
-                break;
+            Player player = collision.GetComponent<Player>();
+            switch (_obstacleType)
+            {
+                case ObstacleType.Normal:
+                    {
+                        Debug.Log("Normal");
+                        player.Hp -= _normalDamage;
+                    }
+                    break;
+                case ObstacleType.Arrow:
+                    {
+                        Debug.Log("Arrow");
+                        player.Hp -= _arrowDamage;
+                    }
+                    break;
+                case ObstacleType.EndPoint:
+                    {
+                        Debug.Log("EndPoint");
+                        EndPoint();
+                    }
+                    break;
+                default:
+                    {
+                        Debug.Log("Obstacle");
+                    }
+                    break;
+            }
         }
     }
 
@@ -73,7 +78,8 @@ public class ObstacleObject : Object
 
         transform.position += arrowSpeed * Time.deltaTime * Vector3.left;
     }
-    void EndPoint()
+
+    private void EndPoint()
     {
         GameManager.Instance.GameOver();
     }

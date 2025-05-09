@@ -4,120 +4,170 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Animator animator;
+    Animator _animator;
     Rigidbody2D _rigidbody;
     CircleCollider2D _circleCollider;
 
-    [Header("Player State")] //일단 다른데에서 쓸 수도 있으니 public으로 남겨둡니다.
+    [Header("Player State")]
+    [SerializeField] private float _maxHp;
+    [SerializeField] private float _hp;
+    [SerializeField] private float _speed;
+    [SerializeField] private float _jumpForce;
 
-    public float HP = 100;
-    public float Speed = 3f;
-    public float JumpForce = 8f;
+    public float MaxHp
+    {
+        get
+        {
+            return _maxHp;
+        }
+        set
+        {
+            if (value < 1f)
+            {
+                _maxHp = 1f;
+            }
+            else
+            {
+                _maxHp = value;
+            }
+        }
+    }
+    public float Hp
+    {
+        get
+        {
+            return _hp;
+        }
+        set
+        {
+            if (value > _maxHp)
+            {
+                _hp = _maxHp;
+            }
+            else if (value < 0f)
+            {
+                _hp = 0f;
+            }
+            else
+            {
+                _hp = value;
+            }
+        }
+    }
+    public float Speed
+    {
+        get => _speed;
+        set => _speed = value;
+    }
+    public float JumpForce
+    {
+        get => _jumpForce;
+        set => _jumpForce = value;
+    }
 
-    [SerializeField] private bool godMode = false;
+    [SerializeField] private bool _godMode = false;
 
-    float deathCooldown = 0f;
-    float invincibleCooldown = 0f;
-    float originalColliderSize = 0f;
-    
+    private float _deathCooldown = 0f;
+    private float _invincibleCooldown = 0f;
+    private float _originalColliderSize = 0f;
 
-    bool isJump = false;
-    bool canJump = true;
-    bool isSlide = false;
-    bool isSliding = false;
-    bool isDead = false;
 
-    GameManager gameManager;
+    private bool _isJump = false;
+    private bool _canJump = true;
+    private bool _isSlideInput = false;
+    private bool _isSliding = false;
+    private bool _isDead = false;
 
     void Start()
     {
-        gameManager = GameManager.Instance;
-
-        animator = GetComponentInChildren<Animator>();
+        _animator = GetComponentInChildren<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _circleCollider = GetComponent<CircleCollider2D>();
 
-        if (animator == null)
-            Debug.LogError($"{gameObject.name}의 애니메이터를 찾을 수 없습니다. ");
+        // 인스펙터에서 수정
+        //MaxHp = 100f;
+        //Hp = 100f;
+        //Speed = 3f;
+        //JumpForce = 8f;
 
-        if (_rigidbody == null)
-            Debug.LogError($"{gameObject.name}의 리지드바디를 찾을 수 없습니다.");
-
-        if (_circleCollider != null)
-        {
-            originalColliderSize = _circleCollider.radius;
-        }
-        else Debug.LogError($"{gameObject.name}의 서클콜라이더를 찾을 수 없습니다.");
+        _originalColliderSize = _circleCollider.radius;
     }
 
     void Update()
     {
-        if (isDead)
+        if (_isDead)
         {
-            if (deathCooldown <= 0)
+            if (_deathCooldown <= 0f)
             {
                 //게임오버 로직
             }
             else
             {
-                deathCooldown -= Time.deltaTime;
+                _deathCooldown -= Time.deltaTime;
             }
-        }
-        else
-        {
-            invincibleCooldown -= Time.deltaTime;
-            if (canJump && Input.GetKeyDown(KeyCode.Space))
-                isJump = true;
 
-            isSlide = Input.GetKey(KeyCode.LeftShift);
+            return;
         }
+
+        _invincibleCooldown -= Time.deltaTime;
+        if (_canJump && Input.GetKeyDown(KeyCode.Space))
+        {
+            _isJump = true;
+        }
+
+        _isSlideInput = Input.GetKey(KeyCode.LeftShift);
     }
 
 
 
     private void FixedUpdate()
     {
-        if (isDead) return;
+        if (_isDead)
+        {
+            return;
+        }
 
         Vector3 velocity = _rigidbody.velocity;
         velocity.x = Speed;
 
-        if (isJump)
+        if (_isJump)
         {
             velocity.y += JumpForce;
-            isJump = false;
-            canJump = false;
+            _isJump = false;
+            _canJump = false;
         }
 
-        if (isSlide)
+        if (_isSlideInput)
         {
-            if(!isSliding)
+            if (!_isSliding)
             {
                 transform.position += Vector3.down * 0.25f;
                 Debug.Log("위치변경! 아래로!");
             }
-            isSliding = true;
+
+            _isSliding = true;
             _circleCollider.radius = 0.25f;
         }
-        else if (!isSlide)
+        else
         {
-            if (isSliding)
+            if (_isSliding)
             {
                 transform.position += Vector3.up * 0.25f;
                 Debug.Log("위치변경! 위로!");
             }
-            isSliding = false;
-            _circleCollider.radius = originalColliderSize;
+
+            _isSliding = false;
+            _circleCollider.radius = _originalColliderSize;
         }
 
         _rigidbody.velocity = velocity;
     }
 
-    private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "BackGround") //바닥과 닿아야만 다시 점프 가능
+        if (collision.gameObject.CompareTag("BackGround")) //바닥과 닿아야만 다시 점프 가능
         {
-            canJump = true;
+            _canJump = true;
             Debug.Log("점프 가능!");
         }
     }
