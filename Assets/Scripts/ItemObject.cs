@@ -8,62 +8,61 @@ public class ItemObject : Object
         SpeedUp,
         SpeedDown,
         Heal
-    }    
+    }
 
-    private ObjectType objectType = ObjectType.Item;
-    public ObjectType ObjectType { get => objectType; }
-    private string objectName;
-    public string ObjectName { get => objectName; }
+    private ObjectType _objectType = ObjectType.Item;
+    public ObjectType ObjectType => _objectType;
 
-    [SerializeField] ItemType itemType;
+    private string _objectName;
+    public string ObjectName => _objectName;
 
-    Player player;    
+    [SerializeField] ItemType _itemType;
 
     private void Start()
     {
-        objectName = gameObject.name;
+        _objectName = gameObject.name;
     }
 
     public override void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log($"Triggerd : {objectName}");
+        Debug.Log($"Triggerd : {_objectName}");
 
-        player = collision.GetComponent<Player>();
-        if (player == null) { return; }
-
-        switch(itemType)
+        if (collision.CompareTag("Player"))
         {
-            case ItemType.Coin:
-                {
-                    Debug.Log("Coin");
-                    GameManager.Instance.UpdateScore(1);
-                }
-                break;
-            case ItemType.SpeedUp:
-                {
-                    Debug.Log("SpeedUp");
-                    GameManager.Instance.ChangePlayerSpeed(3f);
-                }
-                break;
-            case ItemType.SpeedDown:
-                {
-                    Debug.Log("SpeedDown");
-                    GameManager.Instance.ChangePlayerSpeed(-3f);
-                }
-                break;
-            case ItemType.Heal:
-                {
-                    Debug.Log("Heal");
-                    const float healAmount = 10.0f;
-
-                    ChangePlayerHp(healAmount);
-                }
-                break;
-            default:
-                {
-                    Debug.Log("Item");
-                }
-                break;
+            Player player = collision.GetComponent<Player>();
+            switch (_itemType)
+            {
+                case ItemType.Coin:
+                    {
+                        Debug.Log("Coin");
+                        GameManager.Instance.UpdateScore(1);
+                    }
+                    break;
+                case ItemType.SpeedUp:
+                    {
+                        Debug.Log("SpeedUp");
+                        player.Speed += 10f;
+                    }
+                    break;
+                case ItemType.SpeedDown:
+                    {
+                        Debug.Log("SpeedDown");
+                        player.Speed -= 10f;
+                    }
+                    break;
+                case ItemType.Heal:
+                    {
+                        Debug.Log("Heal");
+                        float healAmount = 10.0f;
+                        player.Hp += healAmount;
+                    }
+                    break;
+                default:
+                    {
+                        Debug.Log("Item");
+                    }
+                    break;
+            }
         }
     }
 }

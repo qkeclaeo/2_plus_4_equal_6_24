@@ -1,123 +1,169 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 
 public class Player : MonoBehaviour
 {
-    Animator animator;
+    Animator _animator;
     Rigidbody2D _rigidbody;
     CircleCollider2D _circleCollider;
 
-    [Header("Player State")] //¿œ¥‹ ¥Ÿ∏•µ•ø°º≠ æµ ºˆµµ ¿÷¿∏¥œ public¿∏∑Œ ≥≤∞‹µ”¥œ¥Ÿ.
+    [Header("Player State")]
+    [SerializeField] private float _maxHp;
+    [SerializeField] private float _hp;
+    [SerializeField] private float _speed;
+    [SerializeField] private float _jumpForce;
 
-    public float HP = 100;
-    public float maxHP = 100f;
-    public float Speed = 3f;
-    public float JumpForce = 8f;
+    public float MaxHp
+    {
+        get
+        {
+            return _maxHp;
+        }
+        set
+        {
+            if (value < 1f)
+            {
+                _maxHp = 1f;
+            }
+            else
+            {
+                _maxHp = value;
+            }
+        }
+    }
+    public float Hp
+    {
+        get
+        {
+            return _hp;
+        }
+        set
+        {
+            if (value > _maxHp)
+            {
+                _hp = _maxHp;
+            }
+            else if (value < 0f)
+            {
+                _hp = 0f;
+            }
+            else
+            {
+                _hp = value;
+            }
+        }
+    }
+    public float Speed
+    {
+        get => _speed;
+        set => _speed = value;
+    }
+    public float JumpForce
+    {
+        get => _jumpForce;
+        set => _jumpForce = value;
+    }
 
-    [SerializeField] private bool godMode = false;
+    [SerializeField] private bool _godMode = false;
 
-    float deathCooldown = 0f;
-    float invincibleCooldown = 0f;
-    float originalColliderSize = 0f;
-    
+    private float _deathCooldown = 0f;
+    private float _invincibleCooldown = 0f;
+    private float _originalColliderSize = 0f;
 
-    bool isJump = false;
-    bool canJump = true;
-    bool isSlide = false;
-    bool isSliding = false;
-    bool isDead = false;
 
-    GameManager gameManager;
+    private bool _isJump = false;
+    private bool _canJump = true;
+    private bool _isSlideInput = false;
+    private bool _isSliding = false;
+    private bool _isDead = false;
 
     void Start()
     {
-        gameManager = GameManager.Instance;
-
-        animator = GetComponentInChildren<Animator>();
+        _animator = GetComponentInChildren<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _circleCollider = GetComponent<CircleCollider2D>();
 
-        if (animator == null)
-            Debug.LogError($"{gameObject.name}¿« æ÷¥œ∏ﬁ¿Ã≈Õ∏¶ √£¿ª ºˆ æ¯Ω¿¥œ¥Ÿ. ");
+        // Ïù∏Ïä§ÌéôÌÑ∞ÏóêÏÑú ÏàòÏ†ï
+        //MaxHp = 100f;
+        //Hp = 100f;
+        //Speed = 3f;
+        //JumpForce = 8f;
 
-        if (_rigidbody == null)
-            Debug.LogError($"{gameObject.name}¿« ∏Æ¡ˆµÂπŸµ∏¶ √£¿ª ºˆ æ¯Ω¿¥œ¥Ÿ.");
-
-        if (_circleCollider != null)
-        {
-            originalColliderSize = _circleCollider.radius;
-        }
-        else Debug.LogError($"{gameObject.name}¿« º≠≈¨ƒ›∂Û¿Ã¥ı∏¶ √£¿ª ºˆ æ¯Ω¿¥œ¥Ÿ.");
+        _originalColliderSize = _circleCollider.radius;
     }
 
     void Update()
     {
-        if (isDead)
+        if (_isDead)
         {
-            if (deathCooldown <= 0)
+            if (_deathCooldown <= 0f)
             {
-                //∞‘¿”ø¿πˆ ∑Œ¡˜
+                // Í≤åÏûÑÏò§Î≤Ñ Î°úÏßÅ
             }
             else
             {
-                deathCooldown -= Time.deltaTime;
+                _deathCooldown -= Time.deltaTime;
             }
+
+            return;
         }
-        else
+
+        _invincibleCooldown -= Time.deltaTime;
+        if (_canJump && Input.GetKeyDown(KeyCode.Space))
         {
-            invincibleCooldown -= Time.deltaTime;
-            if (canJump && Input.GetKeyDown(KeyCode.Space))
-                isJump = true;
-
-            isSlide = Input.GetKey(KeyCode.LeftShift);
+            _isJump = true;
         }
+
+        _isSlideInput = Input.GetKey(KeyCode.LeftShift);
     }
-
-
 
     private void FixedUpdate()
     {
-        if (isDead) return;
+        if (_isDead)
+        {
+            return;
+        }
 
         Vector3 velocity = _rigidbody.velocity;
         velocity.x = Speed;
 
-        if (isJump)
+        if (_isJump)
         {
             velocity.y += JumpForce;
-            isJump = false;
-            canJump = false;
+            _isJump = false;
+            _canJump = false;
         }
 
-        if (isSlide)
+        if (_isSlideInput)
         {
-            if(!isSliding)
+            if (!_isSliding)
             {
                 transform.position += Vector3.down * 0.25f;
             }
-            isSliding = true;
+
+            _isSliding = true;
             _circleCollider.radius = 0.25f;
         }
-        else if (!isSlide)
+        else
         {
-            if (isSliding)
+            if (_isSliding)
             {
                 transform.position += Vector3.up * 0.25f;
             }
-            isSliding = false;
-            _circleCollider.radius = originalColliderSize;
+
+            _isSliding = false;
+            _circleCollider.radius = _originalColliderSize;
         }
 
         _rigidbody.velocity = velocity;
     }
 
-    private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "BackGround") //πŸ¥⁄∞˙ ¥Íæ∆æﬂ∏∏ ¥ŸΩ√ ¡°«¡ ∞°¥…
+        if (collision.gameObject.CompareTag("BackGround"))
         {
-            canJump = true;
+            _canJump = true;
         }
     }
 }

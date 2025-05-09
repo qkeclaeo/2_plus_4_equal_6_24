@@ -6,7 +6,6 @@ public class HomeUI : BaseUI
 {
     public override void Init()
     {
-        Time.timeScale = 0f;
         base.Init();
     }
 

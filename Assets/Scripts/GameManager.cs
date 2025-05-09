@@ -5,107 +5,131 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject[] stage;
-    [SerializeField] private Player player;
+    public static GameManager Instance { get; private set; }
 
-    GameObject curStage;
-    static GameManager gameManager;
-    public static GameManager Instance { get { return gameManager; } }
+    [SerializeField] private GameObject[] _stages;
+    [SerializeField] private Player _player;
 
-    int currentScore = 0;
-    int currentStage = 1;        //재시작에 필요
+    public Player Player => _player;
 
-    [SerializeField] private float maxSpeed = 10f;
-    [SerializeField] private float minSpeed = 3f;
-    [SerializeField] private float speedIncreaseRate = 0.1f;
-    [SerializeField] private float hpDecreaseRate = 1f;
+    private GameObject _curStage;
 
-    float currentSpeed = 3f;
-    bool isOver = false;
+    public int CurScore { get; private set; }
+
+    /// <summary>
+    /// 인덱스 X. 스테이지 번호 O (1부터 시작)
+    /// </summary>
+    private int _curStageNum = 1;
+
+    [SerializeField] private float _maxSpeed = 10f;
+    [SerializeField] private float _speedIncreaseRate = 0.1f;
+    [SerializeField] private float _hpDecreaseRate = 1f;
+
+    private bool _isGameOver = false;
 
     private void Awake()
     {
-        gameManager = this;
-        player = FindAnyObjectByType<Player>();
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        _player = FindAnyObjectByType<Player>();
     }
     public void Start()
     {
-        StageStart(currentStage);
+        Time.timeScale = 0f;
+        //StageStart(_curStageNum);
     }
 
-    public void StageStart(int stage_num)
+    public void StartGame()
     {
-        if(curStage != null)
+        CurScore = 0;
+        Time.timeScale = 1f;
+        StageStart(_curStageNum);
+        UIManager.Instance.StartGame();
+    }
+
+    private void StageStart(int stageNum)
+    {
+        if (_curStage != null)
         {
-            isOver = false;
-            currentStage = stage_num;
-            curStage.SetActive(false);
-            curStage = stage[currentStage - 1];
-            curStage.SetActive(true);
+            _isGameOver = false;
+            _curStageNum = stageNum;
+            _curStage.SetActive(false);
+            _curStage = _stages[_curStageNum - 1];
+            _curStage.SetActive(true);
         }
-        UIManager.Instance.UpdateScore(0);
+
+        CurScore = 0;
     }
 
     public void GameOver()
     {
-        isOver = true;
+        Time.timeScale = 0f;
+        _isGameOver = true;
         UIManager.Instance.GameOver();
     }
 
     public void Restart()
     {
-        StageStart(currentStage);
+        _curStageNum = 0;
+        StartGame();
     }
 
+    /// <summary>
+    /// 스코어 변경 X. 스코어 증가 O
+    /// </summary>
+    /// <param name="score"></param>
     public void UpdateScore(int score)
     {
-        currentScore += score;
-        UIManager.Instance.UpdateScore(currentScore);
+        CurScore += score;
     }
 
     private void Update()
     {
-        if (isOver) return;
-        if(player != null)
+        if (_isGameOver)
         {
-            ChangePlayerHP(-hpDecreaseRate * Time.deltaTime);
-            if (player.HP <= 0)
-            {
-                GameOver();
-            }
-            if (player.Speed >= maxSpeed)
-            {
-                StartCoroutine(SlowDown());
-                return;
-            }
-            else ChangePlayerSpeed(speedIncreaseRate * Time.deltaTime);
+            return;
+        }
+
+        if (Player == null)
+        {
+            Debug.LogError("player is null.");
+            return;
+        }
+
+        Player.Hp -= _hpDecreaseRate * Time.deltaTime;
+        if (Player.Hp <= 0f)
+        {
+            GameOver();
+        }
+
+        if (Player.Speed >= _maxSpeed)
+        {
+            StartCoroutine(SlowDown());
+            return;
         }
         else
         {
-            //예외처리
-            Debug.LogError("player is Null");
+            Player.Speed += _speedIncreaseRate * Time.deltaTime;
         }
-    }
-
-    public void ChangePlayerHP(float value)
-    {
-        player.HP = Mathf.Clamp(player.HP + value,0,player.maxHP);
-    }
-
-    public void ChangePlayerSpeed(float value)
-    {
-        player.Speed = Mathf.Clamp(player.Speed+value,minSpeed,maxSpeed);
     }
 
     private IEnumerator SlowDown()
     {
-        while (player.Speed > maxSpeed)
+        while (Player.Speed > _maxSpeed)
         {
-            player.Speed -= Time.deltaTime * 5f;
-            if (player.Speed < maxSpeed)
+            Player.Speed -= Time.deltaTime * 5f;
+            if (Player.Speed < _maxSpeed)
             {
-                player.Speed = maxSpeed;
+                Player.Speed = _maxSpeed;
             }
+
             yield return null;
         }
     }
