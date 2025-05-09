@@ -26,6 +26,8 @@ public class ItemObject : Object
 
     public override void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log($"Triggerd : {objectName}");
+
         player = collision.GetComponent<Player>();
         if (player == null) { return; }
 

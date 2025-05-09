@@ -14,10 +14,10 @@ public class SpawnManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Triggerd: " + collision.name);
-
         if (collision.CompareTag("BackGround"))
         {
+            Debug.Log($"Triggerd : {collision.name}");
+
             float widthOfBgObject = ((BoxCollider2D)collision).size.x;
             Vector3 pos = collision.transform.position;
 
@@ -25,5 +25,17 @@ public class SpawnManager : MonoBehaviour
             collision.transform.position = pos;
             return;
         }
-    }    
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (!collision.gameObject.activeSelf)
+        {
+            collision.gameObject.SetActive(true);
+        }
+        else
+        {
+            Destroy(collision.gameObject);
+        }        
+    }
 }
