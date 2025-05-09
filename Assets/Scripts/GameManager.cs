@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     {
         if(curStage != null)
         {
+            isOver = false;
             currentStage = stage_num;
             curStage.SetActive(false);
             curStage = stage[currentStage - 1];
@@ -46,6 +47,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        isOver = true;
         UIManager.Instance.GameOver();
     }
 
@@ -68,7 +70,6 @@ public class GameManager : MonoBehaviour
             ChangePlayerHP(-hpDecreaseRate * Time.deltaTime);
             if (player.HP <= 0)
             {
-                isOver = true;
                 GameOver();
             }
             if (player.Speed >= maxSpeed)
