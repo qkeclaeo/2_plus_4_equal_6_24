@@ -5,7 +5,8 @@ public class ObstacleObject : Object
     enum ObstacleType
     {
         Normal,
-        Arrow
+        Arrow,
+        EndPoint
     }
 
     private const float normalDamage = 10.0f;
@@ -54,6 +55,10 @@ public class ObstacleObject : Object
                     ChangePlayerHp(-arrowDamage);
                 }
                 break;
+            case ObstacleType.EndPoint:
+                Debug.Log("EndPoint");
+                EndPoint();
+                break;
             default:
                 {
                     Debug.Log("Obstacle");
@@ -67,5 +72,9 @@ public class ObstacleObject : Object
         float arrowSpeed = 5.0f;
 
         transform.position += arrowSpeed * Time.deltaTime * Vector3.left;
+    }
+    void EndPoint()
+    {
+        GameManager.Instance.GameOver();
     }
 }
