@@ -4,44 +4,50 @@ using UnityEngine;
 using TMPro;
 
 public class UIManager : MonoBehaviour
-
-    
 {
-    public static UIManager Instance;
+    public static UIManager Instance { get; private set; }
 
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI restartText;
+    private UIState _curState;
+    [SerializeField] private BaseUI[] _uis;
 
     private void Awake()
     {
-        if (Instance = null)
+        if (Instance == null)
+        {
             Instance = this;
-        else Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Start()
     {
-        if (restartText == null)
-            Debug.LogError("restart text is null");
+        foreach (var ui in _uis)
+        {
+            ui.Init();
+        }
 
-        if (scoreText == null)
-            Debug.LogError("score text is null");
-
-        restartText.gameObject.SetActive(false);
+        ChangeState(UIState.Home);
     }
 
-    public void SetRestart()
+    private void ChangeState(UIState state)
     {
-        restartText.gameObject.SetActive(true);
+        _curState = state;
+        foreach (var ui in _uis)
+        {
+            ui.SetActive(state);
+        }
     }
 
-    public void UpdateScore(int score)
+    public void StartGame()
     {
-        scoreText.text = score.ToString();
+        ChangeState(UIState.InGame);
     }
 
     public void GameOver()
     {
-        //게임오버 UI표시
+        ChangeState(UIState.GameOver);
     }
 }
