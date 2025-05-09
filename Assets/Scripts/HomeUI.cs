@@ -19,7 +19,7 @@ public class HomeUI : BaseUI
     {
         if (Input.anyKeyDown)
         {
-            GameManager.Instance.StartGame();
+            //GameManager.Instance.StartGame();
         }
     }
 }

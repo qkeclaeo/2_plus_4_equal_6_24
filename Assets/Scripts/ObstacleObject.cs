@@ -53,13 +53,13 @@ public class ObstacleObject : Object
             case ObstacleType.Normal:
                 {
                     Debug.Log("Normal");
-                    ChangePlayerHp(-normalDamage);
+                    //ChangePlayerHp(-normalDamage);
                 }
                 break;
             case ObstacleType.Arrow:
                 {
                     Debug.Log("Arrow");
-                    ChangePlayerHp(-arrowDamage);
+                    //ChangePlayerHp(-arrowDamage);
                 }
                 break;
             case ObstacleType.EndPoint:

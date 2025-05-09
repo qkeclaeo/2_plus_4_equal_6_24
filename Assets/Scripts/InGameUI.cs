@@ -14,7 +14,7 @@ public class InGameUI : BaseUI
 
     public override void Init()
     {
-        _player = GameManager.Instance.Player;
+        //_player = GameManager.Instance.Player;
         base.Init();
     }
 
@@ -26,11 +26,11 @@ public class InGameUI : BaseUI
     void Update()
     {
         // 체력바
-        float tempHp = _player.Hp / _player.MaxHp;
-        _hpText.text = (int)_player.Hp + " / " + (int)_player.MaxHp;
-        _hpBar.value = Mathf.Lerp(_hpBar.value, tempHp, Time.deltaTime * 10f);
+        //float tempHp = _player.Hp / _player.MaxHp;
+        //_hpText.text = (int)_player.Hp + " / " + (int)_player.MaxHp;
+        //_hpBar.value = Mathf.Lerp(_hpBar.value, tempHp, Time.deltaTime * 10f);
 
         // 스코어
-        _scoreText.text = GameManager.Instance.CurScore.ToString();
+        //_scoreText.text = GameManager.Instance.CurScore.ToString();
     }
 }

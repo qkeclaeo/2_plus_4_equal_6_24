@@ -19,7 +19,7 @@ public class GameOverUI : BaseUI
     {
         if (Input.anyKeyDown)
         {
-            GameManager.Instance.StartGame();
+            //GameManager.Instance.StartGame();
         }
     }
 }
