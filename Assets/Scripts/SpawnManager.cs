@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -15,16 +16,6 @@ public class SpawnManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Object 태그가 붙어있는 오브젝트(Item/Obstacle) 활성화
-        if (collision.CompareTag("Object"))
-        {
-            Debug.Log($"Object Activation : {collision.name}");
-            collision.gameObject.SetActive(true);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
         // Background 태그가 붙어있는 오브젝트 순환
         if (collision.CompareTag("BackGround"))
         {
@@ -37,12 +28,19 @@ public class SpawnManager : MonoBehaviour
             collision.transform.position = pos;
             return;
         }
-        
+
+        /**
         // Object 태그가 붙어있는 오브젝트(Item/Obstacle) 파괴
-        if (collision.CompareTag("Object"))
+        Debug.Log($"Object Destroy : {collision.name}");
+
+        Tilemap tilemap = collision.gameObject.GetComponent<Tilemap>();
+        if (tilemap != null)
         {
-            Debug.Log($"Object Destroy : {collision.name}");
-            Destroy(collision.gameObject);
+            Vector3 hitPoint = collision.ClosestPoint(transform.position);
+            Vector3Int cellPosition = tilemap.WorldToCell(hitPoint);
+            if (tilemap.HasTile(cellPosition))
+                tilemap.SetTile(cellPosition, null);
         }
+        */
     }
 }
