@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
             curStage = stage[currentStage - 1];
             curStage.SetActive(true);
         }
-        //UIManager.Instance.UpdateScore(0);
+        UIManager.Instance.UpdateScore(0);
     }
 
     public void GameOver()
@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
     public void UpdateScore(int score)
     {
         currentScore += score;
-        //UIManager.Instance.UpdateScore(currentScore);
+        UIManager.Instance.UpdateScore(currentScore);
     }
 
     private void Update()

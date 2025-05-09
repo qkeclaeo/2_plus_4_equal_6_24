@@ -56,7 +56,7 @@ public class ItemObject : Object
                     Debug.Log("Heal");
                     const float healAmount = 10.0f;
 
-                    //ChangePlayerHp(healAmount);
+                    ChangePlayerHp(healAmount);
                 }
                 break;
             default:
