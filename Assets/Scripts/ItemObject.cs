@@ -67,7 +67,7 @@ public class ItemObject : Object
 
     private void Coin()
     {
-        GameManager.Instance.AddScore(1);
+        GameManager.Instance.UpdateScore(1);
     }
 
     private void SpeedUp()
