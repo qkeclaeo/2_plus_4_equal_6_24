@@ -9,19 +9,19 @@ public class ObstacleObject : Object
         EndPoint
     }
 
-    private const float normalDamage = 10.0f;
-    private const float arrowDamage = 10.0f;
+    private const float _normalDamage = 10.0f;
+    private const float _arrowDamage = 10.0f;
 
-    private ObjectType objectType = ObjectType.Obstacle;
-    public ObjectType ObjectType { get => objectType; }
-    private string objectName;
-    public string ObjectName { get => objectName; }
+    private ObjectType _objectType = ObjectType.Obstacle;
+    public ObjectType ObjectType { get => _objectType; }
+    private string _objectName;
+    public string ObjectName { get => _objectName; }
 
-    [SerializeField] ObstacleType obstacleType;
+    [SerializeField] ObstacleType _obstacleType;
 
     private void Start()
     {
-        objectName = gameObject.name;
+        _objectName = gameObject.name;
     }
 
     public override void OnTriggerEnter2D(Collider2D collision)
@@ -29,7 +29,7 @@ public class ObstacleObject : Object
         // SpawnManager와 Arrow가 닿으면 날아옴. 확장성 고려해서 switch 문으로 구현.
         if (collision.gameObject.CompareTag("SpawnManager"))
         {
-            switch(obstacleType)
+            switch(_obstacleType)
             {
                 case ObstacleType.Arrow:
                     {
@@ -47,19 +47,19 @@ public class ObstacleObject : Object
 
         if (!collision.gameObject.CompareTag("Player")) return;
         
-        Debug.Log($"Triggerd : {objectName}");
-        switch(obstacleType)
+        Debug.Log($"Triggerd : {_objectName}");
+        switch(_obstacleType)
         {
             case ObstacleType.Normal:
                 {
                     Debug.Log("Normal");
-                    GameManager.Instance.ChangePlayerHP(-normalDamage);
+                    GameManager.Instance.ChangePlayerHP(-_normalDamage);
                 }
                 break;
             case ObstacleType.Arrow:
                 {
                     Debug.Log("Arrow");
-                    GameManager.Instance.ChangePlayerHP(-arrowDamage);
+                    GameManager.Instance.ChangePlayerHP(-_arrowDamage);
                 }
                 break;
             case ObstacleType.EndPoint:
