@@ -5047,7 +5047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &557582248
 Transform:
   m_ObjectHideFlags: 0
@@ -5076,6 +5076,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numBgCount: 5
+  playerTransform: {fileID: 0}
 --- !u!50 &557582250
 Rigidbody2D:
   serializedVersion: 4
@@ -9395,6 +9396,7 @@ GameObject:
   - component: {fileID: 1072340286}
   - component: {fileID: 1072340285}
   - component: {fileID: 1072340287}
+  - component: {fileID: 1072340288}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -9594,6 +9596,19 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &1072340288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072340283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 962ec312624712343972ed5fda85e868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleType: 1
 --- !u!1 &1080350410
 GameObject:
   m_ObjectHideFlags: 0
@@ -10920,6 +10935,7 @@ GameObject:
   - component: {fileID: 1599623621}
   - component: {fileID: 1599623620}
   - component: {fileID: 1599623622}
+  - component: {fileID: 1599623623}
   m_Layer: 0
   m_Name: Opstacle
   m_TagString: Untagged
@@ -11243,6 +11259,19 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &1599623623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599623618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 962ec312624712343972ed5fda85e868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleType: 0
 --- !u!1 &1682764666
 GameObject:
   m_ObjectHideFlags: 0
@@ -11570,6 +11599,7 @@ GameObject:
   - component: {fileID: 1740144844}
   - component: {fileID: 1740144843}
   - component: {fileID: 1740144845}
+  - component: {fileID: 1740144846}
   m_Layer: 0
   m_Name: Item1
   m_TagString: Untagged
@@ -11757,6 +11787,19 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &1740144846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740144841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26cdc0b9a2019f4c8c9bd5537529049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemType: 2
 --- !u!1 &1799445893
 GameObject:
   m_ObjectHideFlags: 0
@@ -11769,6 +11812,7 @@ GameObject:
   - component: {fileID: 1799445896}
   - component: {fileID: 1799445895}
   - component: {fileID: 1799445897}
+  - component: {fileID: 1799445898}
   m_Layer: 0
   m_Name: Item3
   m_TagString: Untagged
@@ -11948,6 +11992,19 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &1799445898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799445893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26cdc0b9a2019f4c8c9bd5537529049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemType: 1
 --- !u!1 &1836036686
 GameObject:
   m_ObjectHideFlags: 0
@@ -11960,6 +12017,7 @@ GameObject:
   - component: {fileID: 1836036689}
   - component: {fileID: 1836036688}
   - component: {fileID: 1836036690}
+  - component: {fileID: 1836036691}
   m_Layer: 0
   m_Name: Item2
   m_TagString: Untagged
@@ -12139,6 +12197,19 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &1836036691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836036686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26cdc0b9a2019f4c8c9bd5537529049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemType: 3
 --- !u!1 &1853598325
 GameObject:
   m_ObjectHideFlags: 0
@@ -12533,6 +12604,7 @@ GameObject:
   - component: {fileID: 2010100315}
   - component: {fileID: 2010100314}
   - component: {fileID: 2010100316}
+  - component: {fileID: 2010100317}
   m_Layer: 0
   m_Name: EndPoint
   m_TagString: Untagged
@@ -12754,6 +12826,19 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &2010100317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010100312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 962ec312624712343972ed5fda85e868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstacleType: 2
 --- !u!1 &2028900761
 GameObject:
   m_ObjectHideFlags: 0
@@ -13037,6 +13122,7 @@ GameObject:
   - component: {fileID: 2062752704}
   - component: {fileID: 2062752703}
   - component: {fileID: 2062752705}
+  - component: {fileID: 2062752706}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -14720,6 +14806,19 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &2062752706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062752701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26cdc0b9a2019f4c8c9bd5537529049, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemType: 0
 --- !u!1 &2126447337
 GameObject:
   m_ObjectHideFlags: 0
