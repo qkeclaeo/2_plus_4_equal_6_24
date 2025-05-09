@@ -18,8 +18,6 @@ public class ObstacleObject : Object
 
     [SerializeField] ObstacleType obstacleType;
 
-    Player player;
-
     private void Start()
     {
         objectName = gameObject.name;
@@ -40,21 +38,20 @@ public class ObstacleObject : Object
     {
         Debug.Log($"Triggerd : {objectName}");
 
-        player = collision.GetComponent<Player>();
-        if (player == null) { return; }
+        if (collision.tag != "Player") return;
 
         switch(obstacleType)
         {
             case ObstacleType.Normal:
                 {
                     Debug.Log("Normal");
-                    Normal();
+                    ChangePlayerHp(-normalDamage);
                 }
                 break;
             case ObstacleType.Arrow:
                 {
                     Debug.Log("Arrow");
-                    Arrow();
+                    ChangePlayerHp(-arrowDamage);
                 }
                 break;
             default:
@@ -63,16 +60,6 @@ public class ObstacleObject : Object
                 }
                 break;
         }
-    }
-
-    private void Normal()
-    {
-        ChangePlayerHp(player, -normalDamage);
-    }
-
-    private void Arrow()
-    {
-        ChangePlayerHp(player, -arrowDamage);
     }
 
     private void MoveArrow()

@@ -10,9 +10,9 @@ public class Player : MonoBehaviour
 
     [Header("Player State")] //일단 다른데에서 쓸 수도 있으니 public으로 남겨둡니다.
 
-    public int HP = 100;
+    public float HP = 100;
     public float Speed = 3f;
-    public float JumpForce = 6f;
+    public float JumpForce = 8f;
 
     [SerializeField] private bool godMode = false;
 
@@ -120,15 +120,5 @@ public class Player : MonoBehaviour
             canJump = true;
             Debug.Log("점프 가능!");
         }
-    }
-
-    public void DecreaseHp(float value)
-    {
-        //체력변동 동작
-    }
-
-    public void SetSpeed(float value)
-    {
-        //속도변동 동작
     }
 }

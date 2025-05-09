@@ -36,25 +36,27 @@ public class ItemObject : Object
             case ItemType.Coin:
                 {
                     Debug.Log("Coin");
-                    Coin();
+                    GameManager.Instance.UpdateScore(1);
                 }
                 break;
             case ItemType.SpeedUp:
                 {
                     Debug.Log("SpeedUp");
-                    SpeedUp();
+                    GameManager.Instance.ChangePlayerSpeed(10f);
                 }
                 break;
             case ItemType.SpeedDown:
                 {
                     Debug.Log("SpeedDown");
-                    SpeedDown();
+                    GameManager.Instance.ChangePlayerSpeed(-10f);
                 }
                 break;
             case ItemType.Heal:
                 {
                     Debug.Log("Heal");
-                    Heal();
+                    const float healAmount = 10.0f;
+
+                    ChangePlayerHp(healAmount);
                 }
                 break;
             default:
@@ -63,29 +65,5 @@ public class ItemObject : Object
                 }
                 break;
         }
-    }
-
-    private void Coin()
-    {
-        GameManager.Instance.UpdateScore(1);
-    }
-
-    private void SpeedUp()
-    {
-        // 속도 증가
-        // player.speed += 10;
-    }
-
-    private void SpeedDown()
-    {
-        // 속도 감소
-        // player.speed -= 10;
-    }
-
-    private void Heal()
-    {
-        const float healAmount = 10.0f;
-
-        ChangePlayerHp(player, healAmount);
     }
 }

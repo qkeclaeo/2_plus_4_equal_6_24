@@ -10,8 +10,8 @@ public abstract class Object : MonoBehaviour
 {
     public abstract void OnTriggerEnter2D(Collider2D collision);
 
-    public void ChangePlayerHp(Player player, float number)
+    public void ChangePlayerHp(float value)
     {
-        player.HP += (int)number;
+        GameManager.Instance.ChangePlayerHP(value);
     }
 }

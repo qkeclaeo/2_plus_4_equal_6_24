@@ -65,19 +65,46 @@ public class GameManager : MonoBehaviour
         if (isOver) return;
         if(player != null)
         {
-            player.DecreaseHp(hpDecreaseRate * Time.deltaTime);
+            ChangePlayerHP(-hpDecreaseRate * Time.deltaTime);
             if (player.HP <= 0)
             {
                 isOver = true;
                 GameOver();
             }
+            if (player.Speed >= maxSpeed)
+            {
+                StartCoroutine(SlowDown());
+                return;
+            }
+            else ChangePlayerSpeed(speedIncreaseRate * Time.deltaTime);
         }
         else
         {
             //예외처리
             Debug.LogError("player is Null");
         }
-        currentSpeed = Mathf.Min(maxSpeed, currentSpeed + speedIncreaseRate * Time.deltaTime);
-        player.SetSpeed(currentSpeed);
+    }
+
+    public void ChangePlayerHP(float value)
+    {
+        player.HP += value;
+    }
+
+    public void ChangePlayerSpeed(float value)
+    {
+        player.Speed += value;
+    }
+
+    private IEnumerator SlowDown()
+    {
+        while (player.Speed > maxSpeed)
+        {
+            player.Speed -= Time.deltaTime * 5f;
+            if (player.Speed < maxSpeed)
+            {
+                player.Speed = maxSpeed;
+            }
+            yield return null;
+        }
     }
 }

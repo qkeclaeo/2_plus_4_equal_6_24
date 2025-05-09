@@ -9789,7 +9789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 100
   Speed: 3
-  JumpForce: 6
+  JumpForce: 8
   godMode: 1
 --- !u!1 &1241731028
 GameObject:
