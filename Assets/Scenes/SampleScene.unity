@@ -9439,7 +9439,7 @@ Transform:
   m_GameObject: {fileID: 1172909000}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 41.72, y: 7.58, z: 0}
+  m_LocalPosition: {x: 0, y: 7.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10327,7 +10327,7 @@ GameObject:
   - component: {fileID: 1599623623}
   m_Layer: 0
   m_Name: Opstacle
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10647,10 +10647,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1599623618}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 962ec312624712343972ed5fda85e868, type: 3}
+  m_Script: {fileID: 11500000, guid: a7763b748d52c7d47b7da957819dfc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _obstacleType: 0
+  _objectType: 0
 --- !u!1 &1682764666
 GameObject:
   m_ObjectHideFlags: 0
@@ -10981,7 +10981,7 @@ GameObject:
   - component: {fileID: 1740144846}
   m_Layer: 0
   m_Name: Faster
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11185,10 +11185,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1740144841}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e26cdc0b9a2019f4c8c9bd5537529049, type: 3}
+  m_Script: {fileID: 11500000, guid: a7763b748d52c7d47b7da957819dfc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemType: 0
+  _objectType: 0
 --- !u!1 &1799445893
 GameObject:
   m_ObjectHideFlags: 0
@@ -11204,7 +11204,7 @@ GameObject:
   - component: {fileID: 1799445898}
   m_Layer: 0
   m_Name: Slower
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11390,10 +11390,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1799445893}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e26cdc0b9a2019f4c8c9bd5537529049, type: 3}
+  m_Script: {fileID: 11500000, guid: a7763b748d52c7d47b7da957819dfc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemType: 0
+  _objectType: 0
 --- !u!1 &1836036686
 GameObject:
   m_ObjectHideFlags: 0
@@ -11409,7 +11409,7 @@ GameObject:
   - component: {fileID: 1836036691}
   m_Layer: 0
   m_Name: HP
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11595,10 +11595,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1836036686}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e26cdc0b9a2019f4c8c9bd5537529049, type: 3}
+  m_Script: {fileID: 11500000, guid: a7763b748d52c7d47b7da957819dfc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemType: 0
+  _objectType: 0
 --- !u!1001 &1837058678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11607,6 +11607,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126447338}
     m_Modifications:
+    - target: {fileID: 2392756991139954635, guid: 69d58fcf994231040922a01d66cc4842, type: 3}
+      propertyPath: _objectType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4257233185562097769, guid: 69d58fcf994231040922a01d66cc4842, type: 3}
       propertyPath: m_LocalPosition.x
       value: 108.69
@@ -12051,6 +12055,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2126447338}
     m_Modifications:
+    - target: {fileID: 2392756991139954635, guid: 69d58fcf994231040922a01d66cc4842, type: 3}
+      propertyPath: _objectType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4257233185562097769, guid: 69d58fcf994231040922a01d66cc4842, type: 3}
       propertyPath: m_LocalPosition.x
       value: 114.76
@@ -12120,7 +12128,7 @@ GameObject:
   - component: {fileID: 2010100317}
   m_Layer: 0
   m_Name: EndPoint
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12348,10 +12356,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2010100312}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 962ec312624712343972ed5fda85e868, type: 3}
+  m_Script: {fileID: 11500000, guid: a7763b748d52c7d47b7da957819dfc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _obstacleType: 0
+  _objectType: 0
 --- !u!1 &2028900761
 GameObject:
   m_ObjectHideFlags: 0
@@ -12638,7 +12646,7 @@ GameObject:
   - component: {fileID: 2062752706}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14348,10 +14356,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2062752701}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e26cdc0b9a2019f4c8c9bd5537529049, type: 3}
+  m_Script: {fileID: 11500000, guid: a7763b748d52c7d47b7da957819dfc09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemType: 0
+  _objectType: 0
 --- !u!1 &2126447337
 GameObject:
   m_ObjectHideFlags: 0

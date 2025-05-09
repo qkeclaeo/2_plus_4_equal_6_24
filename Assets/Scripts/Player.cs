@@ -170,69 +170,67 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag != "Object") return;
-        //오브젝트의 타입을 정하는 부분 추가시 까지 주석화
-        /*
+        if (other.gameObject.tag != "Object") return;
         ObjectType objectType = other.GetComponent<Object>().ObjectType;
         switch (objectType)
-            {
-                case ObjectType.Coin:
-                    {
-                        Debug.Log("Coin");
-                        GameManager.Instance.UpdateScore(1);
-                    }
-                    break;
-                case ObjectType.SpeedUp:
-                    {
-                        Debug.Log("SpeedUp");
-                        Speed += 10f;
-                    }
-                    break;
-                case ObjectType.SpeedDown:
-                    {
-                        Debug.Log("SpeedDown");
-                        Speed -= 10f;
-                    }
-                    break;
-                case ObjectType.Heal:
-                    {
-                        Debug.Log("Heal");
-                        float healAmount = 10.0f;
-                        Hp += healAmount;
-                    }
-                    break;
-                case ObjectType.Normal:
-                    {
-                        Debug.Log("NrmalObstacle");
-                        float healAmount = -10.0f;
-                        Hp += healAmount;
-                    }
-                    break;
-                case ObjectType.Arrow:
-                    {
-                        Debug.Log("ArrowObstacle");
-                        float healAmount = -10.0f;
-                        Hp += healAmount;
-                    }
-                    break;
-                case ObjectType.EndPoint:
-                    {
-                        Debug.Log("EndPoint");
-                        //게임종료 로직
-                    }
-                    break;
-                default:
-                    {
-                        Debug.Log("Item");
-                    }
-                    break;
-            }
-        */
+        {
+            case ObjectType.Coin:
+                {
+                    Debug.Log("Coin");
+                    GameManager.Instance.UpdateScore(1);
+                }
+                break;
+            case ObjectType.SpeedUp:
+                {
+                    Debug.Log("SpeedUp");
+                    Speed += 10f;
+                }
+                break;
+            case ObjectType.SpeedDown:
+                {
+                    Debug.Log("SpeedDown");
+                    Speed -= 10f;
+                }
+                break;
+            case ObjectType.Heal:
+                {
+                    Debug.Log("Heal");
+                    Hp += 10f;
+                }
+                break;
+            case ObjectType.NormalObstacle:
+                {
+                    Debug.Log("NrmalObstacle");
+                    Hp -= 10f;
+                }
+                break;
+            case ObjectType.Arrow:
+                {
+                    Debug.Log("ArrowObstacle");
+                    Hp -= 10f;
+                }
+                break;
+            case ObjectType.EndPoint:
+                {
+                    Debug.Log("EndPoint");
+                    GameManager.Instance.GameOver();
+                }
+                break;
+            default:
+                {
+                    Debug.Log("Item");
+                }
+                break;
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision) //트리거 들어갔을때
     {
-        if (collision.gameObject.name == "Opstacle") return;
+        if (collision.gameObject.tag != "Object") return;
+
+        Object obj = collision.GetComponent<Object>();
+        if (obj.ObjectType == ObjectType.NormalObstacle || obj.ObjectType == ObjectType.Arrow || obj.ObjectType == ObjectType.EndPoint) return;
+
         Tilemap tilemap = collision.gameObject.GetComponent<Tilemap>(); //타일맵 받아오기
         if (tilemap != null)
         {
@@ -243,5 +241,4 @@ public class Player : MonoBehaviour
             Debug.Log($"{cellPosition}에 있는 {collision.gameObject.name}의 타일을 제거");
         }
     }
-
 }
