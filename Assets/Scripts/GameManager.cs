@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     int currentStage = 1;        //재시작에 필요
 
     [SerializeField] private float maxSpeed = 10f;
+    [SerializeField] private float minSpeed = 3f;
     [SerializeField] private float speedIncreaseRate = 0.1f;
     [SerializeField] private float hpDecreaseRate = 1f;
 
@@ -88,12 +89,12 @@ public class GameManager : MonoBehaviour
 
     public void ChangePlayerHP(float value)
     {
-        player.HP += value;
+        player.HP = Mathf.Clamp(player.HP + value,0,player.maxHP);
     }
 
     public void ChangePlayerSpeed(float value)
     {
-        player.Speed += value;
+        player.Speed = Mathf.Clamp(player.Speed+value,minSpeed,maxSpeed);
     }
 
     private IEnumerator SlowDown()

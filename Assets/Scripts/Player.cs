@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [Header("Player State")] //일단 다른데에서 쓸 수도 있으니 public으로 남겨둡니다.
 
     public float HP = 100;
+    public float maxHP = 100f;
     public float Speed = 3f;
     public float JumpForce = 8f;
 

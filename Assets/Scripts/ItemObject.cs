@@ -42,13 +42,13 @@ public class ItemObject : Object
             case ItemType.SpeedUp:
                 {
                     Debug.Log("SpeedUp");
-                    GameManager.Instance.ChangePlayerSpeed(10f);
+                    GameManager.Instance.ChangePlayerSpeed(3f);
                 }
                 break;
             case ItemType.SpeedDown:
                 {
                     Debug.Log("SpeedDown");
-                    GameManager.Instance.ChangePlayerSpeed(-10f);
+                    GameManager.Instance.ChangePlayerSpeed(-3f);
                 }
                 break;
             case ItemType.Heal:
