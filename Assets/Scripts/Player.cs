@@ -87,7 +87,6 @@ public class Player : MonoBehaviour
     private bool _canJump = true;
     private bool _isSlideInput = false;
     private bool _isSliding = false;
-    private bool _isDead = false;
 
     public bool _isStun = false;
 
@@ -110,25 +109,13 @@ public class Player : MonoBehaviour
     {
         _hp = _maxHp;
         _speed = 3f;
+        _isStun = false;
+        _invincibleCooldown = 0f;
         transform.position = Vector3.up * 7.5f;
     }
 
     void Update()
     {
-        if (_isDead)
-        {
-            if (_deathCooldown <= 0f)
-            {
-                // 게임오버 로직
-            }
-            else
-            {
-                _deathCooldown -= Time.deltaTime;
-            }
-
-            return;
-        }
-
         if(_invincibleCooldown > 0)
         {
             _invincibleCooldown -= Time.deltaTime;
@@ -138,21 +125,19 @@ public class Player : MonoBehaviour
             _invincibleCooldown = 0f;
         }
 
-        if (_canJump && Input.GetKeyDown(KeyCode.Space))
+        if (!_isStun)
         {
-            _isJump = true;
-        }
+            if (_canJump && Input.GetKeyDown(KeyCode.Space))
+            {
+                _isJump = true;
+            }
 
-        _isSlideInput = Input.GetKey(KeyCode.LeftShift);
+            _isSlideInput = Input.GetKey(KeyCode.LeftShift);
+        }
     }
 
     private void FixedUpdate()
     {
-        if (_isDead)
-        {
-            return;
-        }
-
         Vector3 velocity = _rigidbody.velocity;
         switch (_isStun)
         {
