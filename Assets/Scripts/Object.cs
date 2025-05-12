@@ -34,37 +34,37 @@ public class Object : MonoBehaviour
         {
             case ObjectType.Coin:
                 {
-                    Coin();
+                    player.Coin();
                 }
                 break;
             case ObjectType.SpeedUp:
                 {
-                    SpeedUp();
+                    player.ChangeSpeed(10.0f);
                 }
                 break;
             case ObjectType.SpeedDown:
                 {
-                    SpeedDown();
+                    player.ChangeSpeed(-10.0f);
                 }
                 break;
             case ObjectType.Heal:
                 {
-                    Heal();
+                    player.ChangeHp(player.MaxHp * 0.2f);
                 }
                 break;
             case ObjectType.NormalObstacle:
                 {
-                    NormalObstacle();
+                    player.ChangeHp(-10.0f);
                 }
                 break;
             case ObjectType.Arrow:
                 {
-                    Arrow();
+                    player.ChangeHp(-10.0f);
                 }
                 break;
             case ObjectType.EndPoint:
                 {
-                    EndPoint();
+                    player.EndPoint();
                 }
                 break;
             default:
@@ -73,52 +73,6 @@ public class Object : MonoBehaviour
                 }
                 break;
         }
-    }
-
-    public void Coin()
-    {
-        Debug.Log("Coin");
-        GameManager.Instance.UpdateScore(1);
-    }
-
-    public void SpeedUp()
-    {
-        Debug.Log("SpeedUp");
-        player.Speed += 10f;
-    }
-
-    public void SpeedDown()
-    {
-        Debug.Log("SpeedDown");
-        player.Speed -= 10f;
-    }
-
-    public void Heal()
-    {
-        Debug.Log("Heal");
-        player.Hp += player.MaxHp * 0.2f;
-    }
-
-    public void NormalObstacle()
-    {
-        /** isStun과 invincibleCooldown 보호수준 설정 후 주석 해제
-        Debug.Log("NrmalObstacle");
-        if (!player._isStun && player._invincibleCooldown == 0)
-        {
-            player.Hp -= 10f;
-            StartCoroutine(PlayerStun());
-        }*/
-    }
-
-    public void Arrow()
-    {
-        /** 
-        Debug.Log("ArrowObstacle");
-        if (!_isStun && _invincibleCooldown == 0)
-        {
-            player.Hp -= 10f;
-            StartCoroutine(PlayerStun());
-        }*/
     }
 
     public void EndPoint()
