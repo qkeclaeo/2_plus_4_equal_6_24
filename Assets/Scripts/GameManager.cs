@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         Time.timeScale = 0f;
-        _curStage = Instantiate(_stages[_curStageNum-1]);
+        _curStage = Instantiate(_stages[_curStageNum - 1]);
         //StageStart(_curStageNum);
     }
 

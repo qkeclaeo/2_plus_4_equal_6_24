@@ -3735,7 +3735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _stages:
-  - {fileID: 2475269251461997701, guid: d09537966959fb04fa92b9b586c91609, type: 3}
+  - {fileID: 3742163024991891398, guid: d09537966959fb04fa92b9b586c91609, type: 3}
   _player: {fileID: 0}
   _maxSpeed: 10
   _speedIncreaseRate: 0.1
