@@ -5,7 +5,8 @@ using UnityEngine.Tilemaps;
 
 public abstract class Player : MonoBehaviour
 {
-    Animator _animator;
+    protected Animator _animator;
+
     Rigidbody2D _rigidbody;
     CircleCollider2D _circleCollider;
 
@@ -156,6 +157,7 @@ public abstract class Player : MonoBehaviour
             {
                 _invincibleCooldown = _defaultInvincibleCooldown;
                 _isInvincible = false;
+                _animator.SetBool("IsInvincible", false);
             }
         }
 
@@ -251,7 +253,11 @@ public abstract class Player : MonoBehaviour
         if (_isInvincible && value < 0) return;
         Debug.Log($"{(value > 0 ? "Heal" : "Damage")}");
         Hp += value;
-        if (value < 0) StartCoroutine(PlayerStun());
+        if (value < 0)
+        {
+            StartCoroutine(PlayerStun());
+            _animator.SetBool("IsInvincible", true);
+        }
     }
 
     public void EndPoint()
