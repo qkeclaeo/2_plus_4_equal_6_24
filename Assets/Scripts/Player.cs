@@ -15,7 +15,11 @@ public abstract class Player : MonoBehaviour
     [SerializeField] protected float _speed;
     [SerializeField] protected float _jumpForce;
     [SerializeField] protected float _invincibleCooldown;
-    [SerializeField] protected string CharactorDescription;
+    public string CharactorDescription;
+
+    [Header("Player Default Value")]
+    [SerializeField] protected float _defaultSpeed;
+    [SerializeField] protected float _defaultInvincibleCooldown;
 
     public float MaxHp
     {
@@ -57,6 +61,24 @@ public abstract class Player : MonoBehaviour
             }
         }
     }
+    public float DefaultSpeed
+    {
+        get
+        {
+            return _defaultSpeed;
+        }
+        set
+        {
+            if(value < 3f)
+            {
+                _defaultSpeed = 3f;
+            }
+            else
+            {
+                _defaultSpeed = value;
+            }
+        }
+    }
     public float Speed
     {
         get => _speed;
@@ -75,18 +97,16 @@ public abstract class Player : MonoBehaviour
     public float JumpForce
     {
         get => _jumpForce;
-        set => _jumpForce = value;
-    }
-
-    public float InvincibleCooldown
-    {
-        get
-        {
-            return _invincibleCooldown;
-        }
         set
         {
-            _invincibleCooldown = value;
+            if(value < 8)
+            {
+                _jumpForce = 8f;
+            }
+            else
+            {
+                _jumpForce = value;
+            }
         }
     }
 
@@ -95,13 +115,13 @@ public abstract class Player : MonoBehaviour
 
     protected float _originalColliderSize;
 
-    private bool _isJump = false;
-    private bool _canJump = true;
-    private bool _isSlideInput = false;
-    private bool _isSliding = false;
+    protected bool _isJump = false;
+    protected bool _canJump = true;
+    protected bool _isSlideInput = false;
+    protected bool _isSliding = false;
 
-    private bool _isInvincible = false;
-    private bool _isStun = false;
+    protected bool _isInvincible = false;
+    protected bool _isStun = false;
 
     void OnEnable()
     {
@@ -118,23 +138,23 @@ public abstract class Player : MonoBehaviour
         _originalColliderSize = _circleCollider.radius;
     }
 
-    public void Init()
+    public virtual void Init()
     {
         Hp = MaxHp;
-        Speed = _speed;
+        Speed = DefaultSpeed;
+        _invincibleCooldown = _defaultInvincibleCooldown;
         _isStun = false;
-        InvincibleCooldown = _invincibleCooldown;
         transform.position = Vector3.up * 7.5f;
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if(_isInvincible)
         {
-            InvincibleCooldown -= Time.deltaTime;
-            if(InvincibleCooldown <= 0)
+            _invincibleCooldown -= Time.deltaTime;
+            if(_invincibleCooldown <= 0)
             {
-                InvincibleCooldown = _invincibleCooldown;
+                _invincibleCooldown = _defaultInvincibleCooldown;
                 _isInvincible = false;
             }
         }
@@ -194,7 +214,7 @@ public abstract class Player : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("BackGround"))
         {
@@ -228,6 +248,7 @@ public abstract class Player : MonoBehaviour
 
     public void ChangeHp(float value)
     {
+        if (_isInvincible && value < 0) return;
         Debug.Log($"{(value > 0 ? "Heal" : "Damage")}");
         Hp += value;
         if (value < 0) StartCoroutine(PlayerStun());
