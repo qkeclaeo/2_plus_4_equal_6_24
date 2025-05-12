@@ -95,7 +95,17 @@ public abstract class Player : MonoBehaviour
     public float JumpForce
     {
         get => _jumpForce;
-        set => _jumpForce = value;
+        set
+        {
+            if(value < 8)
+            {
+                _jumpForce = 8f;
+            }
+            else
+            {
+                _jumpForce = value;
+            }
+        }
     }
     public float DefaultInvincibleCooldown
     {
