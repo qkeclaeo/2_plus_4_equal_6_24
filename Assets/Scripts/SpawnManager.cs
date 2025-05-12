@@ -4,6 +4,7 @@ using UnityEngine.Tilemaps;
 
 public class SpawnManager : MonoBehaviour
 {
+
     [SerializeField] private float offsetX;
     float nextPosX = 0f;
     public static SpawnManager Instance { get; private set; }
@@ -11,7 +12,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] mapPrefabs;
 
     public Transform spawnPoint;
-//    private Transform lastMapPos = null;
+    //    private Transform lastMapPos = null;
 
     Queue<GameObject> mapsQueue;
     //List<GameObject> mapsPool;
@@ -20,7 +21,8 @@ public class SpawnManager : MonoBehaviour
     int mapCount = 0;
 
     bool isInfinite = false;
-    
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -34,14 +36,15 @@ public class SpawnManager : MonoBehaviour
         }
         mapsQueue = new Queue<GameObject>();
     }
+
     void Start()
     {
         prefabIndex = new List<int>();
-        for (int i = 0; i < mapPrefabs.Length; ++i) {
+        for (int i = 0; i < mapPrefabs.Length; ++i)
+        {
             prefabIndex.Add(i);
         }
-        for (int i = 0; i < 2; ++i)
-        {
+        for (int i = 0; i < 2; ++i) {
             ShuffleIndex();
             for (int j = 0; j < mapPrefabs.Length; ++j)
             {
@@ -56,10 +59,10 @@ public class SpawnManager : MonoBehaviour
     public void Init()
     {
         nextPosX = 0;
-        foreach(var obj in mapsQueue)
+        foreach (var obj in mapsQueue)
         {
             obj.SetActive(true);
-            obj.transform.position = new Vector3(nextPosX,0,0);
+            obj.transform.position = new Vector3(nextPosX, 0, 0);
             nextPosX += offsetX;
         }
     }
@@ -70,15 +73,10 @@ public class SpawnManager : MonoBehaviour
             obj.SetActive(false);
         }
     }
-    public void SpawnMap()
-    {
-    }
-
     public void SetInfiniteMode(bool istrue)
     {
         isInfinite = istrue;
     }
-
     void ShuffleIndex()
     {
         for (int i = prefabIndex.Count - 1; i > 0; --i)
@@ -91,7 +89,7 @@ public class SpawnManager : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(isInfinite && collision.CompareTag("MapPrefab"))
+        if (isInfinite && collision.CompareTag("MapPrefab"))
         {
             ++mapCount;
             if (mapCount >= mapPrefabs.Length)
