@@ -95,13 +95,13 @@ public abstract class Player : MonoBehaviour
 
     protected float _originalColliderSize;
 
-    private bool _isJump = false;
-    private bool _canJump = true;
-    private bool _isSlideInput = false;
-    private bool _isSliding = false;
+    protected bool _isJump = false;
+    protected bool _canJump = true;
+    protected bool _isSlideInput = false;
+    protected bool _isSliding = false;
 
-    private bool _isInvincible = false;
-    private bool _isStun = false;
+    protected bool _isInvincible = false;
+    protected bool _isStun = false;
 
     void OnEnable()
     {
@@ -118,7 +118,7 @@ public abstract class Player : MonoBehaviour
         _originalColliderSize = _circleCollider.radius;
     }
 
-    public void Init()
+    public virtual void Init()
     {
         Hp = MaxHp;
         Speed = _speed;
@@ -127,7 +127,7 @@ public abstract class Player : MonoBehaviour
         transform.position = Vector3.up * 7.5f;
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if(_isInvincible)
         {
@@ -194,7 +194,7 @@ public abstract class Player : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("BackGround"))
         {

@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
-    public Transform target;
+    Transform target;
     float offsetX;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        target = FindAnyObjectByType<Player>().transform;
         if (target == null)
             return;
 
