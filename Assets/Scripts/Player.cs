@@ -188,7 +188,7 @@ public abstract class Player : MonoBehaviour
 
         if (_isJump)
         {
-            velocity.y += JumpForce;
+            velocity.y = JumpForce;
             _isJump = false;
             _canJump = false;
         }
