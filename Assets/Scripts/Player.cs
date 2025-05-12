@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class Player : MonoBehaviour
+public abstract class Player : MonoBehaviour
 {
     Animator _animator;
     Rigidbody2D _rigidbody;
     CircleCollider2D _circleCollider;
 
     [Header("Player State")]
-    [SerializeField] private float _maxHp;
-    [SerializeField] private float _hp;
-    [SerializeField] private float _speed;
-    [SerializeField] private float _jumpForce;
+    [SerializeField] protected float _maxHp;
+    [SerializeField] protected float _hp;
+    [SerializeField] protected float _speed;
+    [SerializeField] protected float _jumpForce;
+    [SerializeField] protected float _invincibleCooldown;
+    [SerializeField] protected string CharactorDescription;
 
     public float MaxHp
     {
@@ -76,21 +78,32 @@ public class Player : MonoBehaviour
         set => _jumpForce = value;
     }
 
-    [SerializeField] private bool _godMode = false;
+    public float InvincibleCooldown
+    {
+        get
+        {
+            return _invincibleCooldown;
+        }
+        set
+        {
+            _invincibleCooldown = value;
+        }
+    }
 
-    private float _deathCooldown = 0f;
-    [SerializeField] private float _invincibleCooldown = 0f;
-    private float _originalColliderSize = 0f;
+    [SerializeField] protected bool _godMode = false;
 
+
+    protected float _originalColliderSize;
 
     private bool _isJump = false;
     private bool _canJump = true;
     private bool _isSlideInput = false;
     private bool _isSliding = false;
 
-    public bool _isStun = false;
+    private bool _isInvincible = false;
+    private bool _isStun = false;
 
-    void Start()
+    void OnEnable()
     {
         _animator = GetComponentInChildren<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -107,22 +120,23 @@ public class Player : MonoBehaviour
 
     public void Init()
     {
-        _hp = _maxHp;
-        _speed = 3f;
+        Hp = MaxHp;
+        Speed = _speed;
         _isStun = false;
-        _invincibleCooldown = 0f;
+        InvincibleCooldown = _invincibleCooldown;
         transform.position = Vector3.up * 7.5f;
     }
 
     void Update()
     {
-        if(_invincibleCooldown > 0)
+        if(_isInvincible)
         {
-            _invincibleCooldown -= Time.deltaTime;
-        }
-        else
-        {
-            _invincibleCooldown = 0f;
+            InvincibleCooldown -= Time.deltaTime;
+            if(InvincibleCooldown <= 0)
+            {
+                InvincibleCooldown = _invincibleCooldown;
+                _isInvincible = false;
+            }
         }
 
         if (!_isStun)
@@ -157,28 +171,27 @@ public class Player : MonoBehaviour
             _canJump = false;
         }
 
-        if (_isSlideInput)
-        {
-            if (!_isSliding)
-            {
-                transform.position += Vector3.down * 0.25f;
-            }
-
-            _isSliding = true;
-            _circleCollider.radius = 0.25f;
-        }
-        else
-        {
-            if (_isSliding)
-            {
-                transform.position += Vector3.up * 0.25f;
-            }
-
-            _isSliding = false;
-            _circleCollider.radius = _originalColliderSize;
-        }
-
         _rigidbody.velocity = velocity;
+
+        switch (_isSlideInput)
+        {
+            case true:
+                if (!_isSliding)
+                {
+                    transform.position += Vector3.down * (_originalColliderSize / 2);
+                    _circleCollider.radius = (_originalColliderSize / 2);
+                }
+                _isSliding = true;
+                break;
+            case false:
+                if (_isSliding)
+                {
+                    transform.position += Vector3.up * (_originalColliderSize / 2);
+                    _circleCollider.radius = _originalColliderSize;
+                }
+                _isSliding = false;
+                break;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -189,97 +202,40 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag != "Object") return;
-        ObjectType objectType = other.GetComponent<Object>().ObjectType;
-        switch (objectType)
-        {
-            case ObjectType.Coin:
-                {
-                    Debug.Log("Coin");
-                    GameManager.Instance.UpdateScore(1);
-                }
-                break;
-            case ObjectType.SpeedUp:
-                {
-                    Debug.Log("SpeedUp");
-                    Speed += 10f;
-                }
-                break;
-            case ObjectType.SpeedDown:
-                {
-                    Debug.Log("SpeedDown");
-                    Speed -= 10f;
-                }
-                break;
-            case ObjectType.Heal:
-                {
-                    Debug.Log("Heal");
-                    Hp += (MaxHp * 0.2f);
-                }
-                break;
-            case ObjectType.NormalObstacle:
-                {
-                    Debug.Log("NrmalObstacle");
-                    if(!_isStun && _invincibleCooldown == 0)
-                    {
-                        Hp -= 10f;
-                        StartCoroutine(PlayerStun());
-                    }
-                }
-                break;
-            case ObjectType.Arrow:
-                {
-                    Debug.Log("ArrowObstacle");
-                    if (!_isStun && _invincibleCooldown == 0)
-                    {
-                        Hp -= 10f;
-                        StartCoroutine(PlayerStun());
-                    }
-                }
-                break;
-            case ObjectType.EndPoint:
-                {
-                    Debug.Log("EndPoint");
-                    GameManager.Instance.GameOver();
-                }
-                break;
-            default:
-                {
-                    Debug.Log("Item");
-                }
-                break;
-        }
-    }
-
-    private void OnTriggerStay2D(Collider2D collision) //트리거 들어갔을때
-    {
-        if (collision.gameObject.tag != "Object") return;
-
-        Object obj = collision.GetComponent<Object>();
-        if (obj.ObjectType == ObjectType.NormalObstacle || obj.ObjectType == ObjectType.Arrow || obj.ObjectType == ObjectType.EndPoint) return;
-
-        Tilemap tilemap = collision.gameObject.GetComponent<Tilemap>(); //타일맵 받아오기
-        if (tilemap != null)
-        {
-            Vector3 hitPoint = collision.ClosestPoint(transform.position); //플레이어 위치와 가까운 위치 찾기
-            Vector3Int cellPosition = tilemap.WorldToCell(hitPoint); //월드위치에서 셀위치 찾기
-            if (tilemap.HasTile(cellPosition)) //해당 셀에 타일이 있다면
-                tilemap.SetTile(cellPosition, null); //해당 타일 지우기
-            Debug.Log($"{cellPosition}에 있는 {collision.gameObject.name}의 타일을 제거");
-        }
-    }
-
-    private IEnumerator PlayerStun()
+    private IEnumerator PlayerStun() //장애물과 충돌 시 작동시킬 코루틴
     {
         _isStun = true;
-        _invincibleCooldown = 10f;
+        _isInvincible = true;
 
         yield return new WaitForSeconds(3f);
 
         _isStun = false;
 
         yield return null;
+    }
+
+    public void Coin()
+    {
+        Debug.Log("Coin");
+        GameManager.Instance.UpdateScore(1);
+    }
+
+    public void ChangeSpeed(float value)
+    {
+        Debug.Log($"{(value > 0 ? "SpeedUp" : "SpeedDown")}");
+        Speed += value;
+    }
+
+    public void ChangeHp(float value)
+    {
+        Debug.Log($"{(value > 0 ? "Heal" : "Damage")}");
+        Hp += value;
+        if (value < 0) StartCoroutine(PlayerStun());
+    }
+
+    public void EndPoint()
+    {
+        Debug.Log("EndPoint");
+        GameManager.Instance.GameOver();
     }
 }
