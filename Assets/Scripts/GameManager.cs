@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         Time.timeScale = 0f;
-        _curStage = _stages[0];     //재시작 테스트용
+        _curStage = Instantiate(_stages[_curStageNum - 1]);
         //StageStart(_curStageNum);
     }
 
@@ -59,15 +59,15 @@ public class GameManager : MonoBehaviour
     {
         if (_curStage != null)
         {
-            _isGameOver = false;
+            if (_isGameOver)
+            {
+                _isGameOver = false;
+            }
+            Destroy(_curStage);
             Player.Init();
             _curStageNum = stageNum;
-            _curStage.SetActive(false);
-            _curStage = _stages[_curStageNum - 1];
-            _curStage.SetActive(true);
+            _curStage = Instantiate(_stages[_curStageNum - 1]);
         }
-
-        CurScore = 0;
     }
 
     public void GameOver()
@@ -79,8 +79,7 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-        _curStageNum = 0;
-        StartGame();
+        StageStart(_curStageNum);
     }
 
     /// <summary>
