@@ -12,6 +12,7 @@ public abstract class Player : MonoBehaviour
     [Header("Player State")]
     [SerializeField] protected float _maxHp;
     [SerializeField] protected float _hp;
+    [SerializeField] protected float _defaultSpeed;
     [SerializeField] protected float _speed;
     [SerializeField] protected float _jumpForce;
     [SerializeField] protected float _invincibleCooldown;
@@ -55,6 +56,17 @@ public abstract class Player : MonoBehaviour
             {
                 _hp = value;
             }
+        }
+    }
+    public float DefaultSpeed
+    {
+        get
+        {
+            return _defaultSpeed;
+        }
+        set
+        {
+            _defaultSpeed = value;
         }
     }
     public float Speed
@@ -121,7 +133,7 @@ public abstract class Player : MonoBehaviour
     public virtual void Init()
     {
         Hp = MaxHp;
-        Speed = _speed;
+        Speed = DefaultSpeed;
         _isStun = false;
         InvincibleCooldown = _invincibleCooldown;
         transform.position = Vector3.up * 7.5f;
