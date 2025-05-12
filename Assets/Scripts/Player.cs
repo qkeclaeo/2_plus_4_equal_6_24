@@ -58,7 +58,17 @@ public class Player : MonoBehaviour
     public float Speed
     {
         get => _speed;
-        set => _speed = value;
+        set
+        {
+            if(value < 3f)
+            {
+                _speed = 3f;
+            }
+            else
+            {
+                _speed = value;
+            }
+        }
     }
     public float JumpForce
     {
@@ -69,7 +79,7 @@ public class Player : MonoBehaviour
     [SerializeField] private bool _godMode = false;
 
     private float _deathCooldown = 0f;
-    private float _invincibleCooldown = 0f;
+    [SerializeField] private float _invincibleCooldown = 0f;
     private float _originalColliderSize = 0f;
 
 
@@ -78,6 +88,8 @@ public class Player : MonoBehaviour
     private bool _isSlideInput = false;
     private bool _isSliding = false;
     private bool _isDead = false;
+
+    public bool _isStun = false;
 
     void Start()
     {
@@ -117,7 +129,15 @@ public class Player : MonoBehaviour
             return;
         }
 
-        _invincibleCooldown -= Time.deltaTime;
+        if(_invincibleCooldown > 0)
+        {
+            _invincibleCooldown -= Time.deltaTime;
+        }
+        else
+        {
+            _invincibleCooldown = 0f;
+        }
+
         if (_canJump && Input.GetKeyDown(KeyCode.Space))
         {
             _isJump = true;
@@ -134,7 +154,16 @@ public class Player : MonoBehaviour
         }
 
         Vector3 velocity = _rigidbody.velocity;
-        velocity.x = Speed;
+        switch (_isStun)
+        {
+            case false:
+                velocity.x = Speed;
+                break;
+
+            case true:
+                velocity.x = 0f;
+                break;
+        }
 
         if (_isJump)
         {
@@ -202,19 +231,27 @@ public class Player : MonoBehaviour
             case ObjectType.Heal:
                 {
                     Debug.Log("Heal");
-                    Hp += 10f;
+                    Hp += (MaxHp * 0.2f);
                 }
                 break;
             case ObjectType.NormalObstacle:
                 {
                     Debug.Log("NrmalObstacle");
-                    Hp -= 10f;
+                    if(!_isStun && _invincibleCooldown == 0)
+                    {
+                        Hp -= 10f;
+                        StartCoroutine(PlayerStun());
+                    }
                 }
                 break;
             case ObjectType.Arrow:
                 {
                     Debug.Log("ArrowObstacle");
-                    Hp -= 10f;
+                    if (!_isStun && _invincibleCooldown == 0)
+                    {
+                        Hp -= 10f;
+                        StartCoroutine(PlayerStun());
+                    }
                 }
                 break;
             case ObjectType.EndPoint:
@@ -247,5 +284,17 @@ public class Player : MonoBehaviour
                 tilemap.SetTile(cellPosition, null); //해당 타일 지우기
             Debug.Log($"{cellPosition}에 있는 {collision.gameObject.name}의 타일을 제거");
         }
+    }
+
+    private IEnumerator PlayerStun()
+    {
+        _isStun = true;
+        _invincibleCooldown = 10f;
+
+        yield return new WaitForSeconds(3f);
+
+        _isStun = false;
+
+        yield return null;
     }
 }
