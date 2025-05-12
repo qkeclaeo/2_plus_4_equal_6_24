@@ -24,11 +24,6 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        foreach (var ui in _uis)
-        {
-            ui.Init();
-        }
-
         ChangeState(UIState.Home);
     }
 
@@ -38,6 +33,7 @@ public class UIManager : MonoBehaviour
         foreach (var ui in _uis)
         {
             ui.SetActive(state);
+            ui.Init();
         }
     }
 

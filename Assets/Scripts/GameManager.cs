@@ -15,6 +15,25 @@ public class GameManager : MonoBehaviour
     private GameObject _curStage;
 
     public int CurScore { get; private set; }
+    public int MaxScore
+    {
+        get
+        {
+            if (PlayerPrefs.HasKey("MaxScore"))
+            {
+                return PlayerPrefs.GetInt("MaxScore");
+            }
+            else
+            {
+                return -1;
+            }
+        }
+        private set
+        {
+            PlayerPrefs.SetInt("MaxScore", value);
+            PlayerPrefs.Save();
+        }
+    }
 
     /// <summary>
     /// 인덱스 X. 스테이지 번호 O (1부터 시작)
@@ -49,14 +68,13 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        CurScore = 0;
-        Time.timeScale = 1f;
         StageStart(_curStageNum);
-        UIManager.Instance.StartGame();
     }
 
     private void StageStart(int stageNum)
     {
+        CurScore = 0;
+        Time.timeScale = 1f;
         if (_curStage != null)
         {
             if (_isGameOver)
@@ -68,12 +86,19 @@ public class GameManager : MonoBehaviour
             _curStageNum = stageNum;
             _curStage = Instantiate(_stages[_curStageNum - 1]);
         }
+
+        UIManager.Instance.StartGame();
     }
 
     public void GameOver()
     {
         Time.timeScale = 0f;
         _isGameOver = true;
+        if (MaxScore < CurScore)
+        {
+            MaxScore = CurScore;
+        }
+
         UIManager.Instance.GameOver();
     }
 
