@@ -12,12 +12,14 @@ public abstract class Player : MonoBehaviour
     [Header("Player State")]
     [SerializeField] protected float _maxHp;
     [SerializeField] protected float _hp;
-    [SerializeField] protected float _defaultSpeed;
     [SerializeField] protected float _speed;
     [SerializeField] protected float _jumpForce;
-    [SerializeField] protected float _defaultInvincibleCooldown;
     [SerializeField] protected float _invincibleCooldown;
-    [SerializeField] protected string CharactorDescription;
+    public string CharactorDescription;
+
+    [Header("Player Default Value")]
+    [SerializeField] protected float _defaultSpeed;
+    [SerializeField] protected float _defaultInvincibleCooldown;
 
     public float MaxHp
     {
@@ -107,29 +109,6 @@ public abstract class Player : MonoBehaviour
             }
         }
     }
-    public float DefaultInvincibleCooldown
-    {
-        get
-        {
-            return _defaultInvincibleCooldown;
-        }
-        set
-        {
-            _defaultInvincibleCooldown = value;
-        }
-    }
-
-    public float InvincibleCooldown
-    {
-        get
-        {
-            return _invincibleCooldown;
-        }
-        set
-        {
-            _invincibleCooldown = value;
-        }
-    }
 
     [SerializeField] protected bool _godMode = false;
 
@@ -163,7 +142,7 @@ public abstract class Player : MonoBehaviour
     {
         Hp = MaxHp;
         Speed = DefaultSpeed;
-        InvincibleCooldown = DefaultInvincibleCooldown;
+        _invincibleCooldown = _defaultInvincibleCooldown;
         _isStun = false;
         transform.position = Vector3.up * 7.5f;
     }
@@ -172,10 +151,10 @@ public abstract class Player : MonoBehaviour
     {
         if(_isInvincible)
         {
-            InvincibleCooldown -= Time.deltaTime;
-            if(InvincibleCooldown <= 0)
+            _invincibleCooldown -= Time.deltaTime;
+            if(_invincibleCooldown <= 0)
             {
-                InvincibleCooldown = DefaultInvincibleCooldown;
+                _invincibleCooldown = _defaultInvincibleCooldown;
                 _isInvincible = false;
             }
         }
@@ -269,6 +248,7 @@ public abstract class Player : MonoBehaviour
 
     public void ChangeHp(float value)
     {
+        if (_isInvincible && value < 0) return;
         Debug.Log($"{(value > 0 ? "Heal" : "Damage")}");
         Hp += value;
         if (value < 0) StartCoroutine(PlayerStun());

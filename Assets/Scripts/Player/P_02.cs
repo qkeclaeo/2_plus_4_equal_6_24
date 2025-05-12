@@ -18,10 +18,10 @@ public class P_02 : Player
     {
         if (_isInvincible)
         {
-            InvincibleCooldown -= Time.deltaTime;
-            if (InvincibleCooldown <= 0)
+            _invincibleCooldown -= Time.deltaTime;
+            if (_invincibleCooldown <= 0)
             {
-                InvincibleCooldown = DefaultInvincibleCooldown;
+                _invincibleCooldown = _defaultInvincibleCooldown;
                 _isInvincible = false;
             }
         }
