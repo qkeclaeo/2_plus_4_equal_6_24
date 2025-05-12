@@ -21,7 +21,7 @@ public class P_02 : Player
             InvincibleCooldown -= Time.deltaTime;
             if (InvincibleCooldown <= 0)
             {
-                InvincibleCooldown = _invincibleCooldown;
+                InvincibleCooldown = DefaultInvincibleCooldown;
                 _isInvincible = false;
             }
         }

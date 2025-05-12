@@ -15,6 +15,7 @@ public abstract class Player : MonoBehaviour
     [SerializeField] protected float _defaultSpeed;
     [SerializeField] protected float _speed;
     [SerializeField] protected float _jumpForce;
+    [SerializeField] protected float _defaultInvincibleCooldown;
     [SerializeField] protected float _invincibleCooldown;
     [SerializeField] protected string CharactorDescription;
 
@@ -66,7 +67,14 @@ public abstract class Player : MonoBehaviour
         }
         set
         {
-            _defaultSpeed = value;
+            if(value < 3f)
+            {
+                _defaultSpeed = 3f;
+            }
+            else
+            {
+                _defaultSpeed = value;
+            }
         }
     }
     public float Speed
@@ -88,6 +96,17 @@ public abstract class Player : MonoBehaviour
     {
         get => _jumpForce;
         set => _jumpForce = value;
+    }
+    public float DefaultInvincibleCooldown
+    {
+        get
+        {
+            return _defaultInvincibleCooldown;
+        }
+        set
+        {
+            _defaultInvincibleCooldown = value;
+        }
     }
 
     public float InvincibleCooldown
@@ -134,8 +153,8 @@ public abstract class Player : MonoBehaviour
     {
         Hp = MaxHp;
         Speed = DefaultSpeed;
+        InvincibleCooldown = DefaultInvincibleCooldown;
         _isStun = false;
-        InvincibleCooldown = _invincibleCooldown;
         transform.position = Vector3.up * 7.5f;
     }
 
@@ -146,7 +165,7 @@ public abstract class Player : MonoBehaviour
             InvincibleCooldown -= Time.deltaTime;
             if(InvincibleCooldown <= 0)
             {
-                InvincibleCooldown = _invincibleCooldown;
+                InvincibleCooldown = DefaultInvincibleCooldown;
                 _isInvincible = false;
             }
         }
