@@ -111,6 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHp: 100
   _hp: 100
+  _defaultSpeed: 3
   _speed: 3
   _jumpForce: 8
   _invincibleCooldown: 5
