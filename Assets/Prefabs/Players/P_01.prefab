@@ -114,6 +114,7 @@ MonoBehaviour:
   _defaultSpeed: 3
   _speed: 3
   _jumpForce: 8
+  _defaultInvincibleCooldown: 5
   _invincibleCooldown: 5
   CharactorDescription: "\uD2B9\uC774\uD55C\uAC83 \uC5C6\uB294 \uD3C9\uBC94\uD55C
     \uCE90\uB9AD\uD130 \uC785\uB2C8\uB2E4."
