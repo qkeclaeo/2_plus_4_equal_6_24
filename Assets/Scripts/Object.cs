@@ -22,6 +22,7 @@ public class Object : MonoBehaviour
 
     private void Start()
     {
+        player = GetComponent<Player>();        
         _objectName = gameObject.name;
     }
 
@@ -73,12 +74,8 @@ public class Object : MonoBehaviour
                 }
                 break;
         }
-    }
 
-    public void EndPoint()
-    {
-        Debug.Log("EndPoint");
-        GameManager.Instance.GameOver();
+        gameObject.SetActive(false);
     }
 
     private void MoveArrow(GameObject gameObject)
