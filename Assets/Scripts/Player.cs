@@ -283,10 +283,9 @@ public abstract class Player : MonoBehaviour
                 tilemap.SetTile(cellPosition, null); //해당 타일 지우기
             Debug.Log($"{cellPosition}에 있는 {collision.gameObject.name}의 타일을 제거");
         }
-        else
+        else if(!isObstacle)
         {
             collision.gameObject.SetActive(false);
         }
     }
-
 }
