@@ -7,7 +7,11 @@ public enum UIState
     Home,
     InGame,
     GameOver,
-    Tutorial
+    Tutorial,
+    Option,
+    StageSelect,
+    ModeSelect,
+    PlayerSelect
 }
 
 public abstract class BaseUI : MonoBehaviour

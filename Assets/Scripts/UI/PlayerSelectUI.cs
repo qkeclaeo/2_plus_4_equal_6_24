@@ -4,73 +4,81 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerSelectUI : MonoBehaviour
+public class PlayerSelectUI : BaseUI
 {
-    GameObject[] playerObjects;
-    Player[] players;
+    private GameObject[] _playerObjects;
+    private Player[] _players;
 
-    [SerializeField] Button nextButton;
-    [SerializeField] Button previousButton;
-    [SerializeField] Button selectButtons;
+    [SerializeField] private Button _nextButton;
+    [SerializeField] private Button _previousButton;
+    [SerializeField] private Button _selectButtons;
 
     [Header("Player Info")]
-    [SerializeField] Text nameText;
-    [SerializeField] Text descriptionText;
-    [SerializeField] Image characterImage;
-    [SerializeField] TextMeshProUGUI selectedText;
+    [SerializeField] private Text _nameText;
+    [SerializeField] private Text _descriptionText;
+    [SerializeField] private Image _characterImage;
+    [SerializeField] private TextMeshProUGUI _selectedText;
 
-    int index = 0;
-    int selectedIndex = 0;
+    private int _index = 0;
+    private int _selectedIndex = 0;
 
-    private void OnEnable()
+    protected override UIState GetUIState()
     {
-        players = FindObjectsOfType<Player>();
-        playerObjects = new GameObject[players.Length];
-        for (int i = 0; i < players.Length; i++)
+        return UIState.PlayerSelect;
+    }
+
+    public override void Init()
+    {
+        _players = FindObjectsOfType<Player>();
+        _playerObjects = new GameObject[_players.Length];
+        for (int i = 0; i < _players.Length; i++)
         {
-            playerObjects[i] = players[i].gameObject;
-            if (i != 0) playerObjects[i].SetActive(false);
+            _playerObjects[i] = _players[i].gameObject;
+            if (i != 0)
+            {
+                _playerObjects[i].SetActive(false);
+            }
         }
 
-        nextButton.onClick.AddListener(() => ChangeCharacter(1));
-        previousButton.onClick.AddListener(() => ChangeCharacter(-1));
-        selectButtons.onClick.AddListener(() => PlayerSelect());
+        _nextButton.onClick.AddListener(() => ChangeCharacter(1));
+        _previousButton.onClick.AddListener(() => ChangeCharacter(-1));
+        _selectButtons.onClick.AddListener(() => PlayerSelect());
 
         ChangeCharacter(0);
     }
 
     private void Update()
     {
-        characterImage.sprite = playerObjects[index].GetComponentInChildren<SpriteRenderer>().sprite;
+        _characterImage.sprite = _playerObjects[_index].GetComponentInChildren<SpriteRenderer>().sprite;
     }
 
     void ChangeCharacter(int i)
     {
-        index += i;
-        if (index < 0) index = 0;
-        else if (index >= playerObjects.Length) index = (playerObjects.Length - 1);
+        _index += i;
+        if (_index < 0) _index = 0;
+        else if (_index >= _playerObjects.Length) _index = (_playerObjects.Length - 1);
 
-        if (index == selectedIndex)
+        if (_index == _selectedIndex)
         {
-            selectedText.text = "Selected";
+            _selectedText.text = "Selected";
         }
         else
         {
-            selectedText.text = "Select";
+            _selectedText.text = "Select";
         }
 
-        nameText.text = players[index].CharacterName;
-        descriptionText.text = players[index].CharacterDescription;
-        characterImage.preserveAspect = true;
+        _nameText.text = _players[_index].CharacterName;
+        _descriptionText.text = _players[_index].CharacterDescription;
+        _characterImage.preserveAspect = true;
     }
 
     void PlayerSelect()
     {
-        for (int i = 0; i < playerObjects.Length; i++)
+        for (int i = 0; i < _playerObjects.Length; i++)
         {
-            playerObjects[i].SetActive(i == index);
-            selectedText.text = "Selected";
-            selectedIndex = index;
+            _playerObjects[i].SetActive(i == _index);
+            _selectedText.text = "Selected";
+            _selectedIndex = _index;
         }
     }
 }

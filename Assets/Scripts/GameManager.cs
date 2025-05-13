@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
 
         _player = FindAnyObjectByType<Player>();
     }
-    public void Start()
+    private void Start()
     {
         Time.timeScale = 0f;
         _curStage = Instantiate(_stages[_curStageNum - 1]);
@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
     {
         SpawnManager.Instance.SetInfiniteMode(true);
     }
+
     private void StageStart(int stageNum)
     {
         SpawnManager.Instance.SetInfiniteMode(false);

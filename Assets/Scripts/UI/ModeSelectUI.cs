@@ -4,13 +4,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ModeSelectUI : MonoBehaviour
+public class ModeSelectUI : BaseUI
 {
     [SerializeField] Button stageSelectButton;
     [SerializeField] Button infinityModeButton;
 
-    private void Start()
+    protected override UIState GetUIState()
     {
+        return UIState.ModeSelect;
+    }
+
+    public override void Init()
+    {
+        stageSelectButton.onClick.RemoveAllListeners();
+        infinityModeButton.onClick.RemoveAllListeners();
+
         stageSelectButton.onClick.AddListener(() => LoadStageSelectScene());
         infinityModeButton.onClick.AddListener(() => LoadInfinityModeScene());
     }

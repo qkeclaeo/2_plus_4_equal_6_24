@@ -66,7 +66,6 @@ public class TutorialUI : BaseUI
 
     private void OnClickExit()
     {
-        // 튜토리얼 UI 종료
-        Debug.Log("튜토리얼 종료");
+        UIManager.Instance.BackToPrevUI();
     }
 }
