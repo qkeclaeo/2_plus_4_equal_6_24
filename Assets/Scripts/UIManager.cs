@@ -46,4 +46,9 @@ public class UIManager : MonoBehaviour
     {
         ChangeState(UIState.GameOver);
     }
+
+    public void ShowTutorial()
+    {
+        ChangeState(UIState.Tutorial);
+    }
 }

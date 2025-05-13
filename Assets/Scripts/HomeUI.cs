@@ -1,24 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HomeUI : BaseUI
 {
-    public override void Init()
-    {
-        base.Init();
-    }
+    [SerializeField] private Button _playButton;
+    [SerializeField] private Button _optionButton;
+    [SerializeField] private Button _quitButton;
 
     protected override UIState GetUIState()
     {
         return UIState.Home;
     }
 
-    void Update()
+    public override void Init()
     {
-        if (Input.anyKeyDown)
-        {
-            GameManager.Instance.StartGame();
-        }
+        _playButton.onClick.RemoveAllListeners();
+        _optionButton.onClick.RemoveAllListeners();
+        _quitButton.onClick.RemoveAllListeners();
+
+        _playButton.onClick.AddListener(OnClickPlay);
+        _optionButton.onClick.AddListener(OnClickOption);
+        _quitButton.onClick.AddListener(OnClickQuit);
+    }
+
+    private void OnClickPlay()
+    {
+        // Todo: 캐릭터 선택창 이동 로직 작성
+    }
+
+    private void OnClickOption()
+    {
+        // Todo: 옵션 UI 이동 로직 작성
+    }
+
+    private void OnClickQuit()
+    {
+        Application.Quit();
     }
 }
