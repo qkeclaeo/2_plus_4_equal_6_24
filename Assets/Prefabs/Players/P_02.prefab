@@ -220,9 +220,10 @@ MonoBehaviour:
   _speed: 3
   _jumpForce: 8
   _invincibleCooldown: 5
-  CharactorDescription: "\uB2CC\uC790\uC785\uB2C8\uB2E4. \uB124, \uB450\uBC88 \uC810\uD504\uD569\uB2C8\uB2E4."
+  CharacterName: "\uB2CC\uC790?"
+  CharacterDescription: "\uC544\uBB34\uD2BC \uB2CC\uC790.\n\uB450\uBC88 \uC810\uD504
+    \uD569\uB2C8\uB2E4."
   _defaultSpeed: 3
   _defaultInvincibleCooldown: 5
-  _godMode: 0
   _maxJump: 1
   _extraJump: 1
