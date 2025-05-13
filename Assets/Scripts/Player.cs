@@ -99,7 +99,7 @@ public abstract class Player : MonoBehaviour
         get => _jumpForce;
         set
         {
-            if(value < 8)
+            if(value < 8f)
             {
                 _jumpForce = 8f;
             }
@@ -142,6 +142,7 @@ public abstract class Player : MonoBehaviour
     {
         Hp = MaxHp;
         Speed = DefaultSpeed;
+        JumpForce = _jumpForce;
         _invincibleCooldown = _defaultInvincibleCooldown;
         _isStun = false;
         transform.position = Vector3.up * 7.5f;
@@ -259,4 +260,33 @@ public abstract class Player : MonoBehaviour
         Debug.Log("EndPoint");
         GameManager.Instance.GameOver();
     }
+
+    private void OnTriggerStay2D(Collider2D collision) //트리거 들어갔을때
+    {
+        if (!collision.CompareTag("Object")) return;
+
+        Tilemap tilemap = collision.gameObject.GetComponent<Tilemap>(); //타일맵 받아오기
+        Object collisionObject = collision.GetComponent<Object>();
+
+        bool isObstacle =
+            (
+            collisionObject.ObjectType == ObjectType.NormalObstacle ||
+            collisionObject.ObjectType == ObjectType.Arrow ||
+            collisionObject.ObjectType == ObjectType.EndPoint
+            );
+
+        if (tilemap != null && !isObstacle)
+        {
+            Vector3 hitPoint = collision.ClosestPoint(transform.position); //플레이어 위치와 가까운 위치 찾기
+            Vector3Int cellPosition = tilemap.WorldToCell(hitPoint); //월드위치에서 셀위치 찾기
+            if (tilemap.HasTile(cellPosition)) //해당 셀에 타일이 있다면
+                tilemap.SetTile(cellPosition, null); //해당 타일 지우기
+            Debug.Log($"{cellPosition}에 있는 {collision.gameObject.name}의 타일을 제거");
+        }
+        else
+        {
+            collision.gameObject.SetActive(false);
+        }
+    }
+
 }
