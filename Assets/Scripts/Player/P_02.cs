@@ -23,6 +23,7 @@ public class P_02 : Player
             {
                 _invincibleCooldown = _defaultInvincibleCooldown;
                 _isInvincible = false;
+                _animator.SetBool("IsInvincible", false);
             }
         }
 
