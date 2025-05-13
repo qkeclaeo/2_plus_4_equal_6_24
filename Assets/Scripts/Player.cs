@@ -184,6 +184,7 @@ public abstract class Player : MonoBehaviour
 
         if (_isJump)
         {
+            AudioManager.Instance.PlaySFX(AudioManager.Sfx.jump);
             velocity.y = JumpForce;
             _isJump = false;
             _canJump = false;
@@ -196,6 +197,7 @@ public abstract class Player : MonoBehaviour
             case true:
                 if (!_isSliding)
                 {
+                    AudioManager.Instance.PlaySFX(AudioManager.Sfx.sliding);
                     transform.position += Vector3.down * (_originalColliderSize / 2);
                     _circleCollider.radius = (_originalColliderSize / 2);
                 }

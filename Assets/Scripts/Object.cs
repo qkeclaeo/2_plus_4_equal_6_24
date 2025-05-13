@@ -36,31 +36,37 @@ public class Object : MonoBehaviour
             case ObjectType.Coin:
                 {
                     player.Coin();
+                    AudioManager.Instance.PlaySFX(AudioManager.Sfx.item_coin);
                 }
                 break;
             case ObjectType.SpeedUp:
                 {
                     player.ChangeSpeed(10.0f);
+                    AudioManager.Instance.PlaySFX(AudioManager.Sfx.item_fast);
                 }
                 break;
             case ObjectType.SpeedDown:
                 {
                     player.ChangeSpeed(-10.0f);
+                    AudioManager.Instance.PlaySFX(AudioManager.Sfx.item_slow);
                 }
                 break;
             case ObjectType.Heal:
                 {
                     player.ChangeHp(player.MaxHp * 0.2f);
+                    AudioManager.Instance.PlaySFX(AudioManager.Sfx.item_heal);
                 }
                 break;
             case ObjectType.NormalObstacle:
                 {
                     player.ChangeHp(-10.0f);
+                    AudioManager.Instance.PlaySFX(AudioManager.Sfx.damage);
                 }
                 break;
             case ObjectType.Arrow:
                 {
                     player.ChangeHp(-10.0f);
+                    AudioManager.Instance.PlaySFX(AudioManager.Sfx.damage);
                 }
                 break;
             case ObjectType.EndPoint:
