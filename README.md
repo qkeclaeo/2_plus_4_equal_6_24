@@ -87,7 +87,7 @@ E --> F[Game Over]
 
 ## 출처
 - **음원:** https://opengameart.org/ , content/plingy-coin, item-pickup-key, erase-escape,   
-          - power-up-level-up-beansjam, slime-jump-effect, plumber-jump, it-takes-a-hero, hit-sound-bitcrush
+              power-up-level-up-beansjam, slime-jump-effect, plumber-jump, it-takes-a-hero, hit-sound-bitcrush
 - **사진:**
   
 
