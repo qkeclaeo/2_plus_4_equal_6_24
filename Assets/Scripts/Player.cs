@@ -5,13 +5,12 @@ using UnityEngine.Tilemaps;
 
 public abstract class Player : MonoBehaviour
 {
-    protected Animator _animator;
-
+    Animator _animator;
     Rigidbody2D _rigidbody;
     CircleCollider2D _circleCollider;
     SpriteRenderer _sprite;
 
-    [Header("Player State")]
+    [Header("Player State")] //인스팩터에서 조정 가능
     [SerializeField] protected float _maxHp;
     [SerializeField] protected float _hp;
     [SerializeField] protected float _speed;
@@ -19,7 +18,7 @@ public abstract class Player : MonoBehaviour
     [SerializeField] protected float _invincibleCooldown;
     public string CharactorDescription;
 
-    [Header("Player Default Value")]
+    [Header("Player Default Value")] //초기화때 사용할 기본값
     [SerializeField] protected float _defaultSpeed;
     [SerializeField] protected float _defaultInvincibleCooldown;
 
@@ -112,13 +111,11 @@ public abstract class Player : MonoBehaviour
         }
     }
 
-    [SerializeField] protected bool _godMode = false;
-
-
     protected float _originalColliderSize;
 
     protected bool _isJump = false;
     protected bool _canJump = true;
+
     protected bool _isSlideInput = false;
     protected bool _isSliding = false;
 
@@ -131,12 +128,6 @@ public abstract class Player : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         _circleCollider = GetComponent<CircleCollider2D>();
         _sprite = GetComponentInChildren<SpriteRenderer>();
-
-        // 인스펙터에서 수정
-        //MaxHp = 100f;
-        //Hp = 100f;
-        //Speed = 3f;
-        //JumpForce = 8f;
 
         _originalColliderSize = _circleCollider.radius;
     }
@@ -231,7 +222,9 @@ public abstract class Player : MonoBehaviour
     {
         _isStun = true;
         _isInvincible = true;
+
         StartCoroutine(InvincibleAnimation());
+
         yield return new WaitForSeconds(3f);
 
         _isStun = false;
@@ -245,6 +238,7 @@ public abstract class Player : MonoBehaviour
         {
             SetSpriteAlpha(0.1f);
             yield return new WaitForSeconds(0.2f);
+
             SetSpriteAlpha(1f);
             yield return new WaitForSeconds(0.2f);
         }
@@ -284,11 +278,11 @@ public abstract class Player : MonoBehaviour
         GameManager.Instance.GameOver();
     }
 
-    private void OnTriggerStay2D(Collider2D collision) //트리거 들어갔을때
+    private void OnTriggerStay2D(Collider2D collision) //플레이어 오브젝트 충돌 로직
     {
         if (!collision.CompareTag("Object")) return;
 
-        Tilemap tilemap = collision.gameObject.GetComponent<Tilemap>(); //타일맵 받아오기
+        Tilemap tilemap = collision.gameObject.GetComponent<Tilemap>();
         Object collisionObject = collision.GetComponent<Object>();
 
         bool isObstacle =
@@ -300,10 +294,10 @@ public abstract class Player : MonoBehaviour
 
         if (tilemap != null && !isObstacle)
         {
-            Vector3 hitPoint = collision.ClosestPoint(transform.position); //플레이어 위치와 가까운 위치 찾기
-            Vector3Int cellPosition = tilemap.WorldToCell(hitPoint); //월드위치에서 셀위치 찾기
-            if (tilemap.HasTile(cellPosition)) //해당 셀에 타일이 있다면
-                tilemap.SetTile(cellPosition, null); //해당 타일 지우기
+            Vector3 hitPoint = collision.ClosestPoint(transform.position);
+            Vector3Int cellPosition = tilemap.WorldToCell(hitPoint);
+            if (tilemap.HasTile(cellPosition))
+                tilemap.SetTile(cellPosition, null);
         }
         else if(!isObstacle)
         {
