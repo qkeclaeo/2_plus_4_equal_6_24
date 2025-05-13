@@ -28,7 +28,7 @@ public class Object : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (!collider.CompareTag("Player")) return;
-
+        player = collider.GetComponent<Player>();
         Debug.Log("Triggered");
         switch (_objectType)
         {

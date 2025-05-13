@@ -9,6 +9,7 @@ public abstract class Player : MonoBehaviour
 
     Rigidbody2D _rigidbody;
     CircleCollider2D _circleCollider;
+    SpriteRenderer _sprite;
 
     [Header("Player State")]
     [SerializeField] protected float _maxHp;
@@ -129,6 +130,7 @@ public abstract class Player : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _circleCollider = GetComponent<CircleCollider2D>();
+        _sprite = GetComponentInChildren<SpriteRenderer>();
 
         // 인스펙터에서 수정
         //MaxHp = 100f;
@@ -158,7 +160,6 @@ public abstract class Player : MonoBehaviour
             {
                 _invincibleCooldown = _defaultInvincibleCooldown;
                 _isInvincible = false;
-                _animator.SetBool("IsInvincible", false);
             }
         }
 
@@ -166,6 +167,7 @@ public abstract class Player : MonoBehaviour
         {
             if (_canJump && Input.GetKeyDown(KeyCode.Space))
             {
+                _animator.SetTrigger("IsJump");
                 _isJump = true;
             }
 
@@ -225,11 +227,11 @@ public abstract class Player : MonoBehaviour
         }
     }
 
-    private IEnumerator PlayerStun() //장애물과 충돌 시 작동시킬 코루틴
+    private IEnumerator PlayerStun()
     {
         _isStun = true;
         _isInvincible = true;
-
+        StartCoroutine(InvincibleAnimation());
         yield return new WaitForSeconds(3f);
 
         _isStun = false;
@@ -237,33 +239,48 @@ public abstract class Player : MonoBehaviour
         yield return null;
     }
 
+    private IEnumerator InvincibleAnimation()
+    {
+        while (_isInvincible)
+        {
+            SetSpriteAlpha(0.1f);
+            yield return new WaitForSeconds(0.2f);
+            SetSpriteAlpha(1f);
+            yield return new WaitForSeconds(0.2f);
+        }
+
+        SetSpriteAlpha(1f);
+    }
+
+    private void SetSpriteAlpha(float alpha)
+    {
+        Color color = _sprite.color;
+        color.a = alpha;
+        _sprite.color = color;
+    }
+
     public void Coin()
     {
-        Debug.Log("Coin");
         GameManager.Instance.UpdateScore(1);
     }
 
     public void ChangeSpeed(float value)
     {
-        Debug.Log($"{(value > 0 ? "SpeedUp" : "SpeedDown")}");
         Speed += value;
     }
 
     public void ChangeHp(float value)
     {
         if (_isInvincible && value < 0) return;
-        Debug.Log($"{(value > 0 ? "Heal" : "Damage")}");
         Hp += value;
         if (value < 0)
         {
             StartCoroutine(PlayerStun());
-            _animator.SetBool("IsInvincible", true);
         }
     }
 
     public void EndPoint()
     {
-        Debug.Log("EndPoint");
         GameManager.Instance.GameOver();
     }
 
@@ -287,7 +304,6 @@ public abstract class Player : MonoBehaviour
             Vector3Int cellPosition = tilemap.WorldToCell(hitPoint); //월드위치에서 셀위치 찾기
             if (tilemap.HasTile(cellPosition)) //해당 셀에 타일이 있다면
                 tilemap.SetTile(cellPosition, null); //해당 타일 지우기
-            Debug.Log($"{cellPosition}에 있는 {collision.gameObject.name}의 타일을 제거");
         }
         else if(!isObstacle)
         {
