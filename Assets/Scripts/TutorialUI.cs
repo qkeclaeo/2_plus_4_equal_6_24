@@ -33,7 +33,7 @@ public class TutorialUI : BaseUI
 
     protected override UIState GetUIState()
     {
-        return UIState.Tutorial;  // Tutorial로 변경
+        return UIState.Tutorial;
     }
 
     private void UpdateUI()
