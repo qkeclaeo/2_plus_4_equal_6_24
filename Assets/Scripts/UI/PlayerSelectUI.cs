@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SelectPlayer : MonoBehaviour
+public class PlayerSelectUI : MonoBehaviour
 {
     GameObject[] playerObjects;
     Player[] players;
