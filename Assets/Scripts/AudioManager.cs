@@ -24,7 +24,8 @@ public class AudioManager : MonoBehaviour
         SFX_item_coin, // 코인 획득 효과음
         SFX_item_fast, // 가속 아이템 효과음
         SFX_item_slow, // 감속 아이템 효과음
-        SFX_item_heal // 회복 아이템 효과음
+        SFX_item_heal, // 회복 아이템 효과음
+        SFX_damage // 장애물 충돌 시 효과음
     }
 
     private void Awake() // 싱글톤 처리
