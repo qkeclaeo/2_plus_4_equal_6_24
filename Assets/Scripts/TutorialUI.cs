@@ -16,10 +16,8 @@ public class TutorialUI : BaseUI
 
     private void Start()
     {
-        displayImage = GetComponent<Image>();
-        nextButton = GetComponent<Button>();
-        prevButton = GetComponent<Button>();
-        indexText = GetComponent<TextMeshProUGUI>();
+        displayImage = GetComponentInChildren<Image>();
+        indexText = GetComponentInChildren<TextMeshProUGUI>();
 
         Init();
     }
@@ -41,17 +39,19 @@ public class TutorialUI : BaseUI
     private void UpdateUI()
     {
         displayImage.sprite = images[imageIndex];
-        indexText.text = $"{imageIndex + 1} / {images.Length + 1}";
+        indexText.text = $"{imageIndex + 1} / {images.Length}";
     }
 
     private void NextButton()
     {
-        if (imageIndex < images.Length) imageIndex++;
+        Debug.Log("다음");
+        if (imageIndex < images.Length - 1) imageIndex++;
         UpdateUI();
     }
 
     private void PrevButton()
     {
+        Debug.Log("이전");
         if (imageIndex > 0) imageIndex--;
         UpdateUI();
     }
@@ -59,5 +59,6 @@ public class TutorialUI : BaseUI
     private void ExitButton()
     {
         // 튜토리얼 UI 종료
+        Debug.Log("튜토리얼 종료");
     }
 }
