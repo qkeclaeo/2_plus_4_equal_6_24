@@ -1093,7 +1093,7 @@ GameObject:
   - component: {fileID: 5529046932388571822}
   - component: {fileID: 4600422212589304066}
   m_Layer: 5
-  m_Name: SelectUI
+  m_Name: PlayerSelectUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
