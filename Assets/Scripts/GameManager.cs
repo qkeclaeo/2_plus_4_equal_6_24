@@ -8,9 +8,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
     [SerializeField] private GameObject[] _stages;
-    [SerializeField] private Player _player;
+    [SerializeField] private Player[] _players;
 
-    public Player Player => _player;
+    public Player[] Players => _players;
+    public Player Player { get; set; }
 
     private GameObject _curStage;
 
@@ -44,6 +45,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float _speedIncreaseRate = 0.1f;
     [SerializeField] private float _hpDecreaseRate = 1f;
 
+    public bool IsReadyToStart { get; set; }
     private bool _isGameOver = false;
 
     private void Awake()
@@ -56,49 +58,52 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        _player = FindAnyObjectByType<Player>();
     }
     private void Start()
     {
-        Time.timeScale = 0f;
-        _curStage = Instantiate(_stages[_curStageNum - 1]);
+        //_curStage = Instantiate(_stages[_curStageNum - 1]);
         //StageStart(_curStageNum);
     }
 
-    public void StartGame()
+    private void StartGame()
     {
-        StageStart(_curStageNum);
+        if (Player == null)
+        {
+            Player = Players[0];
+        }
+
+        CurScore = 0;
+        _isGameOver = false;
+        Player.Init();
+        Camera.main.GetComponent<FollowCamera>().Init(Player.transform);
+
+        IsReadyToStart = true;
+        UIManager.Instance.StartGame();
     }
 
     public void StartInfiniteMode()
     {
         SpawnManager.Instance.SetInfiniteMode(true);
+        StartGame();
     }
 
-    private void StageStart(int stageNum)
+    public void StageStart(int stageNum)
     {
         SpawnManager.Instance.SetInfiniteMode(false);
-        CurScore = 0;
-        Time.timeScale = 1f;
         if (_curStage != null)
         {
-            if (_isGameOver)
-            {
-                _isGameOver = false;
-            }
             Destroy(_curStage);
-            Player.Init();
-            _curStageNum = stageNum;
-            _curStage = Instantiate(_stages[_curStageNum - 1]);
         }
 
-        UIManager.Instance.StartGame();
+        _curStageNum = stageNum;
+        _curStage = Instantiate(_stages[_curStageNum - 1]);
+
+        StartGame();
     }
 
     public void GameOver()
     {
-        Time.timeScale = 0f;
+        IsReadyToStart = false;
         _isGameOver = true;
         if (MaxScore < CurScore)
         {
@@ -110,7 +115,16 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-        StageStart(_curStageNum);
+        if (SpawnManager.Instance.IsInfinite)
+        {
+            StartInfiniteMode();
+        }
+        else
+        {
+            StageStart(_curStageNum);
+        }
+
+        StartGame();
     }
 
     /// <summary>
@@ -124,7 +138,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (_isGameOver)
+        if (!IsReadyToStart || _isGameOver)
         {
             return;
         }

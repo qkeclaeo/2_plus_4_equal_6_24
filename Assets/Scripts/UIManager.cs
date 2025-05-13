@@ -26,6 +26,11 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
+        foreach (var ui in _uis)
+        {
+            ui.Init();
+        }
+
         ChangeState(UIState.Home);
     }
 
@@ -36,7 +41,7 @@ public class UIManager : MonoBehaviour
         foreach (var ui in _uis)
         {
             ui.SetActive(state);
-            ui.Init();
+            ui.OnChangedState();
         }
     }
 
@@ -63,5 +68,15 @@ public class UIManager : MonoBehaviour
     public void ShowOption()
     {
         ChangeState(UIState.Option);
+    }
+
+    public void ShowPlayOption()
+    {
+        ChangeState(UIState.PlayOption);
+    }
+
+    public void ShowStageSelectUI()
+    {
+        ChangeState(UIState.StageSelect);
     }
 }

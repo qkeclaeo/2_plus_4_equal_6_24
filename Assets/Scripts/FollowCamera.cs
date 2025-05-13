@@ -4,28 +4,28 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
-    Transform target;
-    float offsetX;
+    Transform _target;
+    float _offsetX;
 
 
-    // Start is called before the first frame update
-    void Start()
+    public void Init(Transform target)
     {
-        target = FindAnyObjectByType<Player>().transform;
+        //target = FindAnyObjectByType<Player>().transform;
         if (target == null)
             return;
 
-        offsetX = transform.position.x - target.position.x;
+        _target = target;
+        _offsetX = transform.position.x - _target.position.x;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (target == null)
+        if (_target == null)
             return;
 
         Vector3 pos = transform.position;
-        pos.x = target.position.x + offsetX;
+        pos.x = _target.position.x + _offsetX;
         transform.position = pos;
     }
 }

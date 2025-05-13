@@ -146,6 +146,11 @@ public abstract class Player : MonoBehaviour
 
     protected virtual void Update()
     {
+        if (!GameManager.Instance.IsReadyToStart)
+        {
+            return;
+        }
+
         if(_isInvincible)
         {
             _invincibleCooldown -= Time.deltaTime;
@@ -170,6 +175,11 @@ public abstract class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!GameManager.Instance.IsReadyToStart)
+        {
+            return;
+        }
+
         Vector3 velocity = _rigidbody.velocity;
         switch (_isStun)
         {
@@ -216,6 +226,11 @@ public abstract class Player : MonoBehaviour
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
+        if (!GameManager.Instance.IsReadyToStart)
+        {
+            return;
+        }
+
         if (collision.gameObject.CompareTag("BackGround"))
         {
             _canJump = true;
@@ -284,6 +299,11 @@ public abstract class Player : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision) //플레이어 오브젝트 충돌 로직
     {
+        if (!GameManager.Instance.IsReadyToStart)
+        {
+            return;
+        }
+
         if (!collision.CompareTag("Object")) return;
 
         Tilemap tilemap = collision.gameObject.GetComponent<Tilemap>();

@@ -11,12 +11,18 @@ public enum UIState
     Option,
     StageSelect,
     ModeSelect,
-    PlayerSelect
+    PlayerSelect,
+    PlayOption
 }
 
 public abstract class BaseUI : MonoBehaviour
 {
     public virtual void Init()
+    {
+
+    }
+
+    public virtual void OnChangedState()
     {
 
     }

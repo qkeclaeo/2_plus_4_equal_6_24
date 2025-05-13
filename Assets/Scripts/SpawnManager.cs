@@ -20,7 +20,7 @@ public class SpawnManager : MonoBehaviour
 
     int mapCount = 0;
 
-    bool isInfinite = false;
+    public bool IsInfinite { get; private set; }
 
 
     private void Awake()
@@ -75,7 +75,7 @@ public class SpawnManager : MonoBehaviour
     }
     public void SetInfiniteMode(bool istrue)
     {
-        isInfinite = istrue;
+        IsInfinite = istrue;
     }
     void ShuffleIndex()
     {
@@ -89,7 +89,7 @@ public class SpawnManager : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (!isInfinite) return;
+        if (!IsInfinite) return;
         if (collision.CompareTag("Map"))
         {
 

@@ -32,7 +32,7 @@ public class HomeUI : BaseUI
     private void OnClickPlay()
     {
         // Todo: 캐릭터 선택창 이동 로직 작성
-        GameManager.Instance.StartGame();
+        UIManager.Instance.ShowPlayOption();
     }
 
     private void OnClickTutorial()

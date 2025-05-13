@@ -12,10 +12,9 @@ public class InGameUI : BaseUI
 
     private Player _player;
 
-    public override void Init()
+    public override void OnChangedState()
     {
         _player = GameManager.Instance.Player;
-        base.Init();
     }
 
     protected override UIState GetUIState()
