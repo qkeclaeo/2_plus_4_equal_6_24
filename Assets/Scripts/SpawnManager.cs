@@ -89,11 +89,15 @@ public class SpawnManager : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (isInfinite && collision.CompareTag("MapPrefab"))
+        if (!isInfinite) return;
+        if (collision.CompareTag("Map"))
         {
+
             ++mapCount;
+            Debug.Log("mapCount:" + mapCount);
             if (mapCount >= mapPrefabs.Length)
             {
+                Debug.Log("재배치");
                 List<GameObject> temp = new List<GameObject>();
                 for (int i = 0; i < mapPrefabs.Length; ++i)
                 {
@@ -103,7 +107,13 @@ public class SpawnManager : MonoBehaviour
 
                 for (int i = 0; i < temp.Count; ++i)
                 {
-                    //temp[prefabIndex[i]].Init();        //초기화 함수
+                    Transform[] childs = temp[prefabIndex[i]].GetComponentsInChildren<Transform>(true);
+                    foreach(var child in childs)
+                    {
+                        child.gameObject.SetActive(true);
+                    }
+                    temp[prefabIndex[i]].transform.position = new Vector3(nextPosX, 0, 0);
+                    nextPosX += offsetX;
                     mapsQueue.Enqueue(temp[prefabIndex[i]]);
                 }
                 mapCount = 0;
