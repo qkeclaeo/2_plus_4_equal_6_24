@@ -788,11 +788,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25cbb1017824aed4a80801b5433ae26a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offsetX: 14
+  offsetX: 30
   mapPrefabs:
   - {fileID: 5028847648220743362, guid: df4f4eda4ccf1de4bbdd20a83a7c14a8, type: 3}
-  - {fileID: 5028847648220743362, guid: df4f4eda4ccf1de4bbdd20a83a7c14a8, type: 3}
-  - {fileID: 5028847648220743362, guid: df4f4eda4ccf1de4bbdd20a83a7c14a8, type: 3}
+  - {fileID: 2086400242450883855, guid: cb0d1794de1a35a4a9bf6a52516ab97c, type: 3}
+  - {fileID: 1506477015846151156, guid: 6347ed8c08d4acf40ad2a6ff4d4064d4, type: 3}
+  - {fileID: 4192271213306847946, guid: 6cde254e24d266d4c9ed68ef238047ea, type: 3}
+  - {fileID: 7802232558992944362, guid: 8a39c9dc0c2c6124982beb199336e790, type: 3}
   spawnPoint: {fileID: 1172909001}
 --- !u!61 &1095646487
 BoxCollider2D:
