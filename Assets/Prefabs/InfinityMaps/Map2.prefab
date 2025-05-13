@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -203,7 +203,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -333,7 +333,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -463,7 +463,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -593,7 +593,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -723,7 +723,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -853,7 +853,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -983,7 +983,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1113,7 +1113,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1243,7 +1243,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1373,7 +1373,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1503,7 +1503,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1633,7 +1633,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1763,7 +1763,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1893,7 +1893,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2023,7 +2023,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2153,7 +2153,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2283,7 +2283,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2413,7 +2413,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2543,7 +2543,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2756,7 +2756,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2886,7 +2886,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3016,7 +3016,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3253,7 +3253,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3383,7 +3383,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3513,7 +3513,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3643,7 +3643,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3773,7 +3773,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3903,7 +3903,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4033,7 +4033,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4163,7 +4163,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4293,7 +4293,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4423,7 +4423,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4553,7 +4553,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4683,7 +4683,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4813,7 +4813,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4943,7 +4943,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5073,7 +5073,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5203,7 +5203,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5333,7 +5333,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5550,7 +5550,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5680,7 +5680,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5940,7 +5940,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6070,7 +6070,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6200,7 +6200,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6330,7 +6330,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6460,7 +6460,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6590,7 +6590,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6720,7 +6720,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6850,7 +6850,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6980,7 +6980,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7110,7 +7110,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7271,7 +7271,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7401,7 +7401,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7531,7 +7531,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7694,7 +7694,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7824,7 +7824,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7954,7 +7954,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8084,7 +8084,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8321,7 +8321,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8386,6 +8386,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (51)
@@ -8452,6 +8456,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (12)
@@ -8518,6 +8526,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (48)
@@ -8584,6 +8596,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (7)
@@ -8650,6 +8666,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (31)
@@ -8716,6 +8736,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (9)
@@ -8782,6 +8806,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (47)
@@ -8848,6 +8876,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (19)
@@ -8914,6 +8946,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (11)
@@ -8980,6 +9016,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (40)
@@ -9046,6 +9086,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (13)
@@ -9112,6 +9156,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (35)
@@ -9178,6 +9226,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (42)
@@ -9244,6 +9296,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (2)
@@ -9310,6 +9366,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (38)
@@ -9376,6 +9436,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (26)
@@ -9442,6 +9506,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (5)
@@ -9508,6 +9576,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (43)
@@ -9574,6 +9646,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (41)
@@ -9640,6 +9716,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (15)
@@ -9706,6 +9786,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (3)
@@ -9772,6 +9856,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (54)
@@ -9838,6 +9926,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (45)
@@ -9904,6 +9996,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (23)
@@ -9970,6 +10066,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin
@@ -10036,6 +10136,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (33)
@@ -10102,6 +10206,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (36)
@@ -10168,6 +10276,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (52)
@@ -10234,6 +10346,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (53)
@@ -10300,6 +10416,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (30)
@@ -10366,6 +10486,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (17)
@@ -10432,6 +10556,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (37)
@@ -10498,6 +10626,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (34)
@@ -10564,6 +10696,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (49)
@@ -10630,6 +10766,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (46)
@@ -10696,6 +10836,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (18)
@@ -10762,6 +10906,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (6)
@@ -10828,6 +10976,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (44)
@@ -10894,6 +11046,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (20)
@@ -10960,6 +11116,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (50)
@@ -11026,6 +11186,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (57)
@@ -11092,6 +11256,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (29)
@@ -11158,6 +11326,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (10)
@@ -11224,6 +11396,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (24)
@@ -11290,6 +11466,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (39)
@@ -11356,6 +11536,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (14)
@@ -11422,6 +11606,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (22)
@@ -11488,6 +11676,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (32)
@@ -11554,6 +11746,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (1)
@@ -11660,6 +11856,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5121468706404117590, guid: 5db0fa46ed3b66d4d8c5cc63321a04c5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5332639161075934813, guid: 5db0fa46ed3b66d4d8c5cc63321a04c5, type: 3}
       propertyPath: m_Name
       value: HP (1)
@@ -11682,6 +11882,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (8)
@@ -11748,6 +11952,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (16)
@@ -11814,6 +12022,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (27)
@@ -11880,6 +12092,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (25)
@@ -11946,6 +12162,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (4)
@@ -12012,6 +12232,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (28)
@@ -12118,6 +12342,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5121468706404117590, guid: 5db0fa46ed3b66d4d8c5cc63321a04c5, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 5332639161075934813, guid: 5db0fa46ed3b66d4d8c5cc63321a04c5, type: 3}
       propertyPath: m_Name
       value: HP
@@ -12140,6 +12368,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2146725736344686184}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (21)

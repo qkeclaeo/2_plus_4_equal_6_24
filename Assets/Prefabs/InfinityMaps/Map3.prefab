@@ -180,7 +180,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -310,7 +310,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -440,7 +440,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -570,7 +570,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -700,7 +700,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -830,7 +830,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -960,7 +960,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1090,7 +1090,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1220,7 +1220,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1350,7 +1350,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1480,7 +1480,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1610,7 +1610,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1822,7 +1822,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1952,7 +1952,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2082,7 +2082,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2319,7 +2319,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2449,7 +2449,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2579,7 +2579,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2709,7 +2709,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2839,7 +2839,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2969,7 +2969,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3099,7 +3099,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3359,7 +3359,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3489,7 +3489,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3619,7 +3619,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3749,7 +3749,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3879,7 +3879,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4009,7 +4009,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4139,7 +4139,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4269,7 +4269,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4399,7 +4399,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4529,7 +4529,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4659,7 +4659,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4789,7 +4789,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4919,7 +4919,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5095,7 +5095,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5225,7 +5225,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5414,7 +5414,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5544,7 +5544,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5674,7 +5674,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5804,7 +5804,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5934,7 +5934,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6064,7 +6064,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6194,7 +6194,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6324,7 +6324,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6454,7 +6454,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6584,7 +6584,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6714,7 +6714,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6844,7 +6844,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6974,7 +6974,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7104,7 +7104,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7234,7 +7234,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7364,7 +7364,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7494,7 +7494,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7624,7 +7624,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7754,7 +7754,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7884,7 +7884,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8014,7 +8014,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8144,7 +8144,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 5853206c897728d42a632b41e29b7d31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8274,7 +8274,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 25
   m_Sprite: {fileID: 21300000, guid: 35a76c0bf324efc46969f928ad6cdb01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8383,6 +8383,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SilverSword (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7944393154046841826, guid: 5806ce1527f341f4caffc0445c072b03, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8401,6 +8405,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (7)
@@ -8463,6 +8471,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (10)
@@ -8525,6 +8537,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (21)
@@ -8587,6 +8603,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (11)
@@ -8649,6 +8669,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (12)
@@ -8755,6 +8779,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SilverSword (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7944393154046841826, guid: 5806ce1527f341f4caffc0445c072b03, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8773,6 +8801,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (2)
@@ -8879,6 +8911,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8357285327483402066, guid: 6c7c702d7668714468bab1b339fff667, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8940,6 +8976,10 @@ PrefabInstance:
     - target: {fileID: 5442668763023112552, guid: 5806ce1527f341f4caffc0445c072b03, type: 3}
       propertyPath: m_Name
       value: SilverSword (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944393154046841826, guid: 5806ce1527f341f4caffc0445c072b03, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9003,6 +9043,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SilverSword (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 7944393154046841826, guid: 5806ce1527f341f4caffc0445c072b03, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9064,6 +9108,10 @@ PrefabInstance:
     - target: {fileID: 5442668763023112552, guid: 5806ce1527f341f4caffc0445c072b03, type: 3}
       propertyPath: m_Name
       value: SilverSword (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944393154046841826, guid: 5806ce1527f341f4caffc0445c072b03, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9127,6 +9175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SilverSword
       objectReference: {fileID: 0}
+    - target: {fileID: 7944393154046841826, guid: 5806ce1527f341f4caffc0445c072b03, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9189,6 +9241,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SilverSword (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 7944393154046841826, guid: 5806ce1527f341f4caffc0445c072b03, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9207,6 +9263,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (20)
@@ -9313,6 +9373,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8357285327483402066, guid: 6c7c702d7668714468bab1b339fff667, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9374,6 +9438,10 @@ PrefabInstance:
     - target: {fileID: 7199546878220858288, guid: 6c7c702d7668714468bab1b339fff667, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357285327483402066, guid: 6c7c702d7668714468bab1b339fff667, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9437,6 +9505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SilverSword (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7944393154046841826, guid: 5806ce1527f341f4caffc0445c072b03, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9455,6 +9527,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (22)
@@ -9517,6 +9593,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (9)
@@ -9579,6 +9659,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (16)
@@ -9641,6 +9725,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (14)
@@ -9703,6 +9791,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin
@@ -9765,6 +9857,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (23)
@@ -9827,6 +9923,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (15)
@@ -9889,6 +9989,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (8)
@@ -9995,6 +10099,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Imp
       objectReference: {fileID: 0}
+    - target: {fileID: 5120043008733330643, guid: db3764f42deb0f845a51564615010c90, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10013,6 +10121,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (19)
@@ -10075,6 +10187,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (4)
@@ -10137,6 +10253,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (13)
@@ -10243,6 +10363,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8357285327483402066, guid: 6c7c702d7668714468bab1b339fff667, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10261,6 +10385,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5393157478808155805}
     m_Modifications:
+    - target: {fileID: 4820287824652029567, guid: 0bb968b033afbcb419516ebafec43a75, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5547924823386618930, guid: 0bb968b033afbcb419516ebafec43a75, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.5463305
@@ -10367,6 +10495,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5290289395097817024, guid: 202d1eb21265c774ab1f1b2f81f0ec25, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10385,6 +10517,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (17)
@@ -10447,6 +10583,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (3)
@@ -10553,6 +10693,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SilverSword (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7944393154046841826, guid: 5806ce1527f341f4caffc0445c072b03, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10615,6 +10759,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SilverSword (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7944393154046841826, guid: 5806ce1527f341f4caffc0445c072b03, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10633,6 +10781,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (18)
@@ -10735,6 +10887,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8173546195425210054, guid: 1446ef2b30d9e1c459cdee3248b118c9, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8584556845222704872, guid: 1446ef2b30d9e1c459cdee3248b118c9, type: 3}
       propertyPath: m_Name
       value: GoldSword
@@ -10757,6 +10913,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (1)
@@ -10863,6 +11023,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SilverSword (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 7944393154046841826, guid: 5806ce1527f341f4caffc0445c072b03, type: 3}
+      propertyPath: m_SortingOrder
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10881,6 +11045,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (5)
@@ -10943,6 +11111,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4585293010347049754}
     m_Modifications:
+    - target: {fileID: 2326041786036599543, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2883179544265839506, guid: 678dc243eba780d47b571c8af3eeb8c1, type: 3}
       propertyPath: m_Name
       value: coin (6)
