@@ -71,8 +71,13 @@ public class GameManager : MonoBehaviour
         StageStart(_curStageNum);
     }
 
+    public void StartInfiniteMode()
+    {
+        SpawnManager.Instance.SetInfiniteMode(true);
+    }
     private void StageStart(int stageNum)
     {
+        SpawnManager.Instance.SetInfiniteMode(false);
         CurScore = 0;
         Time.timeScale = 1f;
         if (_curStage != null)
