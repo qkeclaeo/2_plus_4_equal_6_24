@@ -74,8 +74,6 @@ public class Object : MonoBehaviour
                 }
                 break;
         }
-
-        gameObject.SetActive(false);
     }
 
     private void MoveArrow(GameObject gameObject)
