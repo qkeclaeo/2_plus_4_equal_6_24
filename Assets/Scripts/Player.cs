@@ -16,7 +16,9 @@ public abstract class Player : MonoBehaviour
     [SerializeField] protected float _speed;
     [SerializeField] protected float _jumpForce;
     [SerializeField] protected float _invincibleCooldown;
-    public string CharactorDescription;
+    public string CharacterName;
+    [TextArea(2, 5)]
+    public string CharacterDescription;
 
     [Header("Player Default Value")] //초기화때 사용할 기본값
     [SerializeField] protected float _defaultSpeed;
