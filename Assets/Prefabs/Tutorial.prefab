@@ -382,18 +382,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 812a07a55b3b14c4da6baf5a3774dd93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  images:
-  - {fileID: 21300000, guid: 5c013fead3101b24b87812b07c8ed335, type: 3}
-  - {fileID: 21300000, guid: c75be443ce692e0438f114b37fa5cd10, type: 3}
-  - {fileID: 21300000, guid: 4d3a55088d04c3847b7790eb1a6a2260, type: 3}
-  - {fileID: 21300000, guid: 737749d9dfb2b514caf9f2ffe6777120, type: 3}
-  - {fileID: 21300000, guid: 983297731b977004bbae85bb5c5be804, type: 3}
-  - {fileID: 21300000, guid: 217ba396caf743c4b8c2b0b1f2778e88, type: 3}
-  displayImage: {fileID: 3588459075989840316}
-  nextButton: {fileID: 3036247568354039913}
-  prevButton: {fileID: 3516308447699286258}
-  exitButton: {fileID: 8543271738773813696}
-  indexText: {fileID: 2933637346004260567}
+  _images: []
+  _displayImage: {fileID: 3588459075989840316}
+  _nextButton: {fileID: 3036247568354039913}
+  _prevButton: {fileID: 3516308447699286258}
+  _exitButton: {fileID: 8543271738773813696}
+  _indexText: {fileID: 2933637346004260567}
 --- !u!1 &8669931127818748609
 GameObject:
   m_ObjectHideFlags: 0
