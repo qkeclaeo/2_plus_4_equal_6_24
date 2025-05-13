@@ -1056,7 +1056,6 @@ MonoBehaviour:
   CharactorDescription: 
   _defaultSpeed: 0
   _defaultInvincibleCooldown: 0
-  _godMode: 0
   _maxJump: 0
   _extraJump: 0
 --- !u!1 &1682764666
@@ -1834,6 +1833,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb2ef96798b42a64889351e0e4ea4ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playButton: {fileID: 0}
+  _optionButton: {fileID: 0}
+  _quitButton: {fileID: 0}
 --- !u!114 &2729500169174832764
 MonoBehaviour:
   m_ObjectHideFlags: 0

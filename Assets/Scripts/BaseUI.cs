@@ -6,7 +6,8 @@ public enum UIState
 {
     Home,
     InGame,
-    GameOver
+    GameOver,
+    Tutorial
 }
 
 public abstract class BaseUI : MonoBehaviour
