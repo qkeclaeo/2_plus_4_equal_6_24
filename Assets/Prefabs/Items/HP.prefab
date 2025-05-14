@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 806133415625257629}
   - component: {fileID: 5121468706404117590}
   - component: {fileID: 2960235556509724584}
+  - component: {fileID: 6417614337751325434}
   m_Layer: 0
   m_Name: HP
   m_TagString: Untagged
@@ -114,7 +115,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -134,3 +135,16 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
   m_UseDelaunayMesh: 0
+--- !u!114 &6417614337751325434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5332639161075934813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7763b748d52c7d47b7da957819dfc09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectType: 3
