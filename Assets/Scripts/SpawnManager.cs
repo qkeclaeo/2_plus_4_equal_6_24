@@ -18,7 +18,7 @@ public class SpawnManager : MonoBehaviour
     //List<GameObject> mapsPool;
     List<int> prefabIndex;
 
-    int mapCount = 0;
+    [SerializeField] int mapCount = 0;
 
     public bool IsInfinite { get; private set; }
 
@@ -90,9 +90,9 @@ public class SpawnManager : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (!IsInfinite) return;
+
         if (collision.CompareTag("Map"))
         {
-
             ++mapCount;
             Debug.Log("mapCount:" + mapCount);
             if (mapCount >= mapPrefabs.Length)
