@@ -47,7 +47,15 @@ public class UIManager : MonoBehaviour
 
     public void BackToPrevUI()
     {
-        ChangeState(_prevState);
+        switch (_curState)
+        {
+            case UIState.StageSelect:
+                ChangeState(UIState.PlayOption);
+                return;
+            default:
+                break;
+        }
+        ChangeState(UIState.Home);
     }
 
     public void StartGame()
