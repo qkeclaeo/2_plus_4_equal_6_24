@@ -142,6 +142,8 @@ public abstract class Player : MonoBehaviour
         _invincibleCooldown = _defaultInvincibleCooldown;
         _isStun = false;
         transform.position = Vector3.up * 7.5f;
+
+        _rigidbody.simulated = true;
     }
 
     protected virtual void Update()
@@ -151,10 +153,10 @@ public abstract class Player : MonoBehaviour
             return;
         }
 
-        if(_isInvincible)
+        if (_isInvincible)
         {
             _invincibleCooldown -= Time.deltaTime;
-            if(_invincibleCooldown <= 0)
+            if (_invincibleCooldown <= 0)
             {
                 _invincibleCooldown = _defaultInvincibleCooldown;
                 _isInvincible = false;
@@ -177,10 +179,11 @@ public abstract class Player : MonoBehaviour
     {
         if (!GameManager.Instance.IsReadyToStart)
         {
+            _rigidbody.velocity = Vector3.zero;
             return;
         }
 
-        Vector3 velocity = _rigidbody.velocity;
+            Vector3 velocity = _rigidbody.velocity;
         switch (_isStun)
         {
             case false:
