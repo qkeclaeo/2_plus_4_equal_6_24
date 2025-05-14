@@ -16,6 +16,11 @@ public class P_02 : Player
 
     protected override void Update()
     {
+        if (!GameManager.Instance.IsReadyToStart) //게임매니저에서 게임이 시작되었을 때 활성화 되는 값
+        {
+            return;
+        }
+
         if (_isInvincible)
         {
             _invincibleCooldown -= Time.deltaTime;
@@ -45,6 +50,11 @@ public class P_02 : Player
 
     protected override void OnCollisionEnter2D(Collision2D collision)
     {
+        if (!GameManager.Instance.IsReadyToStart)
+        {
+            return;
+        }
+
         if (collision.gameObject.CompareTag("BackGround"))
         {
             _canJump = true;
