@@ -22,29 +22,33 @@ public class Object : MonoBehaviour
 
     private void Start()
     {
+        player = GetComponent<Player>();        
         _objectName = gameObject.name;
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (!collider.CompareTag("Player")) return;
-
+        player = collider.GetComponent<Player>();
         Debug.Log("Triggered");
         switch (_objectType)
         {
             case ObjectType.Coin:
                 {
                     player.Coin();
+                    AudioManager.Instance.PlaySFX(AudioManager.Sfx.item_coin);
                 }
                 break;
             case ObjectType.SpeedUp:
                 {
                     player.ChangeSpeed(10.0f);
+                    AudioManager.Instance.PlaySFX(AudioManager.Sfx.item_fast);
                 }
                 break;
             case ObjectType.SpeedDown:
                 {
                     player.ChangeSpeed(-10.0f);
+                    AudioManager.Instance.PlaySFX(AudioManager.Sfx.item_slow);
                 }
                 break;
             case ObjectType.Heal:
@@ -73,12 +77,6 @@ public class Object : MonoBehaviour
                 }
                 break;
         }
-    }
-
-    public void EndPoint()
-    {
-        Debug.Log("EndPoint");
-        GameManager.Instance.GameOver();
     }
 
     private void MoveArrow(GameObject gameObject)

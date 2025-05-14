@@ -6,12 +6,23 @@ public enum UIState
 {
     Home,
     InGame,
-    GameOver
+    GameOver,
+    Tutorial,
+    Option,
+    StageSelect,
+    ModeSelect,
+    PlayerSelect,
+    PlayOption
 }
 
 public abstract class BaseUI : MonoBehaviour
 {
     public virtual void Init()
+    {
+
+    }
+
+    public virtual void OnChangedState()
     {
 
     }

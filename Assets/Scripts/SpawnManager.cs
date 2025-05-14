@@ -18,9 +18,9 @@ public class SpawnManager : MonoBehaviour
     //List<GameObject> mapsPool;
     List<int> prefabIndex;
 
-    int mapCount = 0;
+    [SerializeField] int mapCount = 0;
 
-    bool isInfinite = false;
+    public bool IsInfinite { get; private set; }
 
 
     private void Awake()
@@ -76,7 +76,7 @@ public class SpawnManager : MonoBehaviour
     }
     public void SetInfiniteMode(bool istrue)
     {
-        isInfinite = istrue;
+        IsInfinite = istrue;
     }
     void ShuffleIndex()
     {
@@ -90,10 +90,10 @@ public class SpawnManager : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (!isInfinite) return;
+        if (!IsInfinite) return;
+
         if (collision.CompareTag("Map"))
         {
-
             ++mapCount;
             Debug.Log("mapCount:" + mapCount);
             if (mapCount >= mapPrefabs.Length)

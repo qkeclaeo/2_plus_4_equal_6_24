@@ -7,6 +7,7 @@ TagManager:
   - BackGround
   - Object
   - SpawnManager
+  - Map
   layers:
   - Default
   - TransparentFX

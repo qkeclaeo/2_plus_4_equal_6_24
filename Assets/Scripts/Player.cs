@@ -8,16 +8,19 @@ public abstract class Player : MonoBehaviour
     Animator _animator;
     Rigidbody2D _rigidbody;
     CircleCollider2D _circleCollider;
+    SpriteRenderer _sprite;
 
-    [Header("Player State")]
+    [Header("Player State")] //인스팩터에서 조정 가능
     [SerializeField] protected float _maxHp;
     [SerializeField] protected float _hp;
     [SerializeField] protected float _speed;
     [SerializeField] protected float _jumpForce;
     [SerializeField] protected float _invincibleCooldown;
-    public string CharactorDescription;
+    public string CharacterName;
+    [TextArea(2, 5)]
+    public string CharacterDescription;
 
-    [Header("Player Default Value")]
+    [Header("Player Default Value")] //초기화때 사용할 기본값
     [SerializeField] protected float _defaultSpeed;
     [SerializeField] protected float _defaultInvincibleCooldown;
 
@@ -99,7 +102,7 @@ public abstract class Player : MonoBehaviour
         get => _jumpForce;
         set
         {
-            if(value < 8)
+            if(value < 8f)
             {
                 _jumpForce = 8f;
             }
@@ -110,17 +113,15 @@ public abstract class Player : MonoBehaviour
         }
     }
 
-    [SerializeField] protected bool _godMode = false;
-
-
     protected float _originalColliderSize;
 
     protected bool _isJump = false;
     protected bool _canJump = true;
+
     protected bool _isSlideInput = false;
     protected bool _isSliding = false;
 
-    protected bool _isInvincible = false;
+    public bool _isInvincible = false;
     protected bool _isStun = false;
 
     void OnEnable()
@@ -128,12 +129,7 @@ public abstract class Player : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _circleCollider = GetComponent<CircleCollider2D>();
-
-        // 인스펙터에서 수정
-        //MaxHp = 100f;
-        //Hp = 100f;
-        //Speed = 3f;
-        //JumpForce = 8f;
+        _sprite = GetComponentInChildren<SpriteRenderer>();
 
         _originalColliderSize = _circleCollider.radius;
     }
@@ -142,17 +138,25 @@ public abstract class Player : MonoBehaviour
     {
         Hp = MaxHp;
         Speed = DefaultSpeed;
+        JumpForce = _jumpForce;
         _invincibleCooldown = _defaultInvincibleCooldown;
         _isStun = false;
         transform.position = Vector3.up * 7.5f;
+
+        _rigidbody.simulated = true;
     }
 
     protected virtual void Update()
     {
-        if(_isInvincible)
+        if (!GameManager.Instance.IsReadyToStart)
+        {
+            return;
+        }
+
+        if (_isInvincible)
         {
             _invincibleCooldown -= Time.deltaTime;
-            if(_invincibleCooldown <= 0)
+            if (_invincibleCooldown <= 0)
             {
                 _invincibleCooldown = _defaultInvincibleCooldown;
                 _isInvincible = false;
@@ -163,6 +167,7 @@ public abstract class Player : MonoBehaviour
         {
             if (_canJump && Input.GetKeyDown(KeyCode.Space))
             {
+                _animator.SetTrigger("IsJump");
                 _isJump = true;
             }
 
@@ -172,7 +177,13 @@ public abstract class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 velocity = _rigidbody.velocity;
+        if (!GameManager.Instance.IsReadyToStart)
+        {
+            _rigidbody.velocity = Vector3.zero;
+            return;
+        }
+
+            Vector3 velocity = _rigidbody.velocity;
         switch (_isStun)
         {
             case false:
@@ -186,7 +197,8 @@ public abstract class Player : MonoBehaviour
 
         if (_isJump)
         {
-            velocity.y += JumpForce;
+            AudioManager.Instance.PlaySFX(AudioManager.Sfx.jump);
+            velocity.y = JumpForce;
             _isJump = false;
             _canJump = false;
         }
@@ -198,6 +210,7 @@ public abstract class Player : MonoBehaviour
             case true:
                 if (!_isSliding)
                 {
+                    AudioManager.Instance.PlaySFX(AudioManager.Sfx.sliding);
                     transform.position += Vector3.down * (_originalColliderSize / 2);
                     _circleCollider.radius = (_originalColliderSize / 2);
                 }
@@ -216,16 +229,23 @@ public abstract class Player : MonoBehaviour
 
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
+        if (!GameManager.Instance.IsReadyToStart)
+        {
+            return;
+        }
+
         if (collision.gameObject.CompareTag("BackGround"))
         {
             _canJump = true;
         }
     }
 
-    private IEnumerator PlayerStun() //장애물과 충돌 시 작동시킬 코루틴
+    private IEnumerator PlayerStun()
     {
         _isStun = true;
         _isInvincible = true;
+
+        StartCoroutine(InvincibleAnimation());
 
         yield return new WaitForSeconds(3f);
 
@@ -234,29 +254,86 @@ public abstract class Player : MonoBehaviour
         yield return null;
     }
 
+    private IEnumerator InvincibleAnimation()
+    {
+        while (_isInvincible)
+        {
+            SetSpriteAlpha(0.1f);
+            yield return new WaitForSeconds(0.2f);
+
+            SetSpriteAlpha(1f);
+            yield return new WaitForSeconds(0.2f);
+        }
+
+        SetSpriteAlpha(1f);
+    }
+
+    private void SetSpriteAlpha(float alpha)
+    {
+        Color color = _sprite.color;
+        color.a = alpha;
+        _sprite.color = color;
+    }
+
     public void Coin()
     {
-        Debug.Log("Coin");
         GameManager.Instance.UpdateScore(1);
     }
 
     public void ChangeSpeed(float value)
     {
-        Debug.Log($"{(value > 0 ? "SpeedUp" : "SpeedDown")}");
         Speed += value;
     }
 
     public void ChangeHp(float value)
     {
         if (_isInvincible && value < 0) return;
-        Debug.Log($"{(value > 0 ? "Heal" : "Damage")}");
         Hp += value;
-        if (value < 0) StartCoroutine(PlayerStun());
+        if (value < 0)
+        {
+            AudioManager.Instance.PlaySFX(AudioManager.Sfx.damage);
+            StartCoroutine(PlayerStun());
+        }
+        else
+        {
+            AudioManager.Instance.PlaySFX(AudioManager.Sfx.item_heal);
+        }
     }
 
     public void EndPoint()
     {
-        Debug.Log("EndPoint");
         GameManager.Instance.GameOver();
+    }
+
+    private void OnTriggerStay2D(Collider2D collision) //플레이어 오브젝트 충돌 로직
+    {
+        if (!GameManager.Instance.IsReadyToStart)
+        {
+            return;
+        }
+
+        if (!collision.CompareTag("Object")) return;
+
+        Tilemap tilemap = collision.gameObject.GetComponent<Tilemap>();
+        Object collisionObject = collision.GetComponent<Object>();
+
+        bool isObstacle =
+            (
+            collisionObject.ObjectType == ObjectType.NormalObstacle ||
+            collisionObject.ObjectType == ObjectType.Arrow ||
+            collisionObject.ObjectType == ObjectType.EndPoint
+            );
+
+        if (tilemap != null && !isObstacle)
+        {
+            Vector3 hitPoint = collision.ClosestPoint(transform.position);
+            Vector3Int cellPosition = tilemap.WorldToCell(hitPoint);
+            if (tilemap.HasTile(cellPosition))
+                tilemap.SetTile(cellPosition, null);
+        }
+        else if(!isObstacle)
+        {
+            collision.gameObject.SetActive(false);
+        }
     }
 }
