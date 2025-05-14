@@ -23,7 +23,7 @@ public class GameOverUI : BaseUI
         });
         _homeBtn.onClick.AddListener(delegate
         {
-            SceneManager.LoadScene("SampleScene");
+            UIManager.Instance.ShowHomeUI();
         });
     }
 
