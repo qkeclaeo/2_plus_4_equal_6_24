@@ -121,7 +121,7 @@ public abstract class Player : MonoBehaviour
     protected bool _isSlideInput = false;
     protected bool _isSliding = false;
 
-    protected bool _isInvincible = false;
+    public bool _isInvincible = false;
     protected bool _isStun = false;
 
     void OnEnable()
@@ -291,7 +291,12 @@ public abstract class Player : MonoBehaviour
         Hp += value;
         if (value < 0)
         {
+            AudioManager.Instance.PlaySFX(AudioManager.Sfx.damage);
             StartCoroutine(PlayerStun());
+        }
+        else
+        {
+            AudioManager.Instance.PlaySFX(AudioManager.Sfx.item_heal);
         }
     }
 
