@@ -58,10 +58,11 @@ public class SpawnManager : MonoBehaviour
     }
     public void Init()
     {
-        nextPosX = 0;
+        nextPosX = mapCount = 0;
         foreach (var obj in mapsQueue)
         {
             obj.SetActive(true);
+            ActiveChildObjects(obj);
             obj.transform.position = new Vector3(nextPosX, 0, 0);
             nextPosX += offsetX;
         }
@@ -107,17 +108,21 @@ public class SpawnManager : MonoBehaviour
 
                 for (int i = 0; i < temp.Count; ++i)
                 {
-                    Transform[] childs = temp[prefabIndex[i]].GetComponentsInChildren<Transform>(true);
-                    foreach(var child in childs)
-                    {
-                        child.gameObject.SetActive(true);
-                    }
+                    ActiveChildObjects(temp[prefabIndex[i]]);
                     temp[prefabIndex[i]].transform.position = new Vector3(nextPosX, 0, 0);
                     nextPosX += offsetX;
                     mapsQueue.Enqueue(temp[prefabIndex[i]]);
                 }
                 mapCount = 0;
             }
+        }
+    }
+    void ActiveChildObjects(GameObject obj)
+    {
+        Transform[] childs = obj.GetComponentsInChildren<Transform>(true);
+        foreach (var child in childs)
+        {
+            child.gameObject.SetActive(true);
         }
     }
 }
