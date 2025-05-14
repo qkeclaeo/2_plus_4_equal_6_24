@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour
     public void StartInfiniteMode()
     {
         SpawnManager.Instance.SetInfiniteMode(true);
+        SpawnManager.Instance.Init();
         StartGame();
     }
 
