@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
 
     public bool IsReadyToStart { get; set; }
     private bool _isGameOver = false;
+    private bool _isCameraSet = false;
 
     private void Awake()
     {
@@ -75,7 +76,15 @@ public class GameManager : MonoBehaviour
         CurScore = 0;
         _isGameOver = false;
         Player.Init();
-        Camera.main.GetComponent<FollowCamera>().Init(Player.transform);
+        if (!_isCameraSet)
+        {
+            Camera.main.GetComponent<FollowCamera>().Init(Player.transform);
+            _isCameraSet = true;
+        }
+        if (SpawnManager.Instance.IsInfinite)
+        {
+            SpawnManager.Instance.Init();
+        }
 
         IsReadyToStart = true;
         UIManager.Instance.StartGame();

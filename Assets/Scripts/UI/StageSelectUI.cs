@@ -17,8 +17,9 @@ public class StageSelectUI : BaseUI
     {
         for (int i = 0; i < _stageButtons.Length; i++)
         {
+            int stageNum = i + 1;
             _stageButtons[i].onClick.RemoveAllListeners();
-            _stageButtons[i].onClick.AddListener(() => GameManager.Instance.StageStart(i + 1));
+            _stageButtons[i].onClick.AddListener(() => GameManager.Instance.StageStart(stageNum));
         }
 
         _exitButton.onClick.RemoveAllListeners();
