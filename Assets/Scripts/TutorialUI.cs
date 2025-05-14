@@ -17,7 +17,7 @@ public class TutorialUI : BaseUI
 
     public override void Init()
     {
-        _displayImage = GetComponentInChildren<Image>();
+        _displayImage = transform.Find("DisplayImage").GetComponent<Image>();
         _indexText = GetComponentInChildren<TextMeshProUGUI>();
 
         _nextButton.onClick.RemoveAllListeners();
@@ -40,32 +40,51 @@ public class TutorialUI : BaseUI
     {
         _displayImage.sprite = _images[_imageIndex];
         _indexText.text = $"{_imageIndex + 1} / {_images.Length}";
+
+        if (_imageIndex == 0)
+        {
+            _prevButton.gameObject.SetActive(false);
+            _nextButton.gameObject.SetActive(true);
+        }
+        else if (_imageIndex == _images.Length - 1)
+        {
+            _prevButton.gameObject.SetActive(true);
+            _nextButton.gameObject.SetActive(false);
+        }
+        else
+        {
+            _prevButton.gameObject.SetActive(true);
+            _nextButton.gameObject.SetActive(true);
+        }
     }
 
     private void OnClickNext()
     {
-        Debug.Log("다음");
         if (_imageIndex < _images.Length - 1)
         {
+            Debug.Log("다음");
             _imageIndex++;
-        }
 
-        UpdateUI();
+            UpdateUI();
+        }
     }
 
     private void OnClickPrev()
     {
-        Debug.Log("이전");
         if (_imageIndex > 0)
         {
+            Debug.Log("이전");
             _imageIndex--;
-        }
 
-        UpdateUI();
+            UpdateUI();
+        }
     }
 
     private void OnClickExit()
     {
+        _imageIndex = 0;
+        UpdateUI();
+        
         UIManager.Instance.BackToPrevUI();
     }
 }
