@@ -16,36 +16,12 @@ public class P_02 : Player
 
     protected override void Update()
     {
-        if (!GameManager.Instance.IsReadyToStart) //게임매니저에서 게임이 시작되었을 때 활성화 되는 값
+        if (!_canJump && _extraJump > 0)
         {
-            return;
+            _canJump = true;
+            _extraJump--;
         }
-
-        if (_isInvincible)
-        {
-            _invincibleCooldown -= Time.deltaTime;
-            if (_invincibleCooldown <= 0)
-            {
-                _invincibleCooldown = _defaultInvincibleCooldown;
-                _isInvincible = false;
-            }
-        }
-
-        if (!_isStun)
-        {
-            if(!_canJump && _extraJump > 0)
-            {
-                _canJump = true;
-                _extraJump--;
-            }
-
-            if (_canJump && Input.GetKeyDown(KeyCode.Space))
-            {
-                _isJump = true;
-            }
-
-            _isSlideInput = Input.GetKey(KeyCode.LeftShift);
-        }
+        base.Update();
     }
 
     protected override void OnCollisionEnter2D(Collision2D collision)

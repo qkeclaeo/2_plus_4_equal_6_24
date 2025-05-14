@@ -215,16 +215,18 @@ public abstract class Player : MonoBehaviour
                     AudioManager.Instance.PlaySFX(AudioManager.Sfx.sliding);
                     transform.position += Vector3.down * (_originalColliderSize / 2);
                     _circleCollider.radius = (_originalColliderSize / 2);
+                    _isSliding = true;
+                    _animator.SetBool("IsSliding", true);
                 }
-                _isSliding = true;
                 break;
             case false:
                 if (_isSliding)
                 {
                     transform.position += Vector3.up * (_originalColliderSize / 2);
                     _circleCollider.radius = _originalColliderSize;
+                    _isSliding = false;
+                    _animator.SetBool("IsSliding", false);
                 }
-                _isSliding = false;
                 break;
         }
     }
