@@ -2388,6 +2388,7 @@ GameObject:
   - component: {fileID: 138653024769146070}
   - component: {fileID: 7383704317418384870}
   - component: {fileID: 5185318331881679763}
+  - component: {fileID: 6413728276134532767}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Untagged
@@ -2511,6 +2512,19 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
   m_UseDelaunayMesh: 0
+--- !u!114 &6413728276134532767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2189769308815849040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7763b748d52c7d47b7da957819dfc09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectType: 4
 --- !u!1 &2336222814014419352
 GameObject:
   m_ObjectHideFlags: 0
@@ -2656,6 +2670,7 @@ GameObject:
   - component: {fileID: 1511317788833690632}
   - component: {fileID: 2591579918527031713}
   - component: {fileID: 582232046623081317}
+  - component: {fileID: 543761801847562663}
   m_Layer: 0
   m_Name: GoldSword (1)
   m_TagString: Untagged
@@ -2779,6 +2794,19 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
   m_UseDelaunayMesh: 0
+--- !u!114 &543761801847562663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2718793423995007375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7763b748d52c7d47b7da957819dfc09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectType: 4
 --- !u!1 &2809191295090255068
 GameObject:
   m_ObjectHideFlags: 0
@@ -3444,6 +3472,7 @@ GameObject:
   - component: {fileID: 1862510221974117580}
   - component: {fileID: 3375048371779846501}
   - component: {fileID: 375259326030637985}
+  - component: {fileID: 53248477432701763}
   m_Layer: 0
   m_Name: GoldSword (2)
   m_TagString: Untagged
@@ -3567,6 +3596,19 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
   m_UseDelaunayMesh: 0
+--- !u!114 &53248477432701763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2925836307165337931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7763b748d52c7d47b7da957819dfc09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectType: 4
 --- !u!1 &2980560311885157252
 GameObject:
   m_ObjectHideFlags: 0
@@ -4496,6 +4538,7 @@ GameObject:
   - component: {fileID: 4475210091892070860}
   - component: {fileID: 3863733257402547660}
   - component: {fileID: 6706468274862710608}
+  - component: {fileID: 3128510212637948192}
   m_Layer: 0
   m_Name: upsideObstacle
   m_TagString: Untagged
@@ -4619,6 +4662,19 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
   m_UseDelaunayMesh: 0
+--- !u!114 &3128510212637948192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3451595178663985224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7763b748d52c7d47b7da957819dfc09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectType: 4
 --- !u!1 &3483802201641584446
 GameObject:
   m_ObjectHideFlags: 0
@@ -5028,6 +5084,7 @@ GameObject:
   - component: {fileID: 3750309598300640720}
   - component: {fileID: 4813623492556030796}
   - component: {fileID: 3443070420770159894}
+  - component: {fileID: 8035431087120497998}
   m_Layer: 0
   m_Name: WarAxe
   m_TagString: Untagged
@@ -5151,6 +5208,19 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
   m_UseDelaunayMesh: 0
+--- !u!114 &8035431087120497998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3787924513710839921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7763b748d52c7d47b7da957819dfc09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectType: 4
 --- !u!1 &3792645909269560170
 GameObject:
   m_ObjectHideFlags: 0
@@ -5946,6 +6016,7 @@ GameObject:
   - component: {fileID: 3123270319935869928}
   - component: {fileID: 2368201802347935720}
   - component: {fileID: 5210980663169799540}
+  - component: {fileID: 3792691140565824538}
   m_Layer: 0
   m_Name: upsideObstacle (1)
   m_TagString: Untagged
@@ -6069,6 +6140,19 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
   m_UseDelaunayMesh: 0
+--- !u!114 &3792691140565824538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4225979091205212780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7763b748d52c7d47b7da957819dfc09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectType: 4
 --- !u!1 &4233504427767398870
 GameObject:
   m_ObjectHideFlags: 0
@@ -6734,6 +6818,7 @@ GameObject:
   - component: {fileID: 2379403720977268241}
   - component: {fileID: 7362112139618249326}
   - component: {fileID: 7127363390548693340}
+  - component: {fileID: 7993329107430955701}
   m_Layer: 0
   m_Name: Imp
   m_TagString: Untagged
@@ -6857,6 +6942,19 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
   m_UseDelaunayMesh: 0
+--- !u!114 &7993329107430955701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4426573788599801731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7763b748d52c7d47b7da957819dfc09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectType: 4
 --- !u!1 &4433963437774756270
 GameObject:
   m_ObjectHideFlags: 0
@@ -7522,6 +7620,7 @@ GameObject:
   - component: {fileID: 6426092775334809679}
   - component: {fileID: 2161797892708746288}
   - component: {fileID: 1928171189350039298}
+  - component: {fileID: 8572319889312134360}
   m_Layer: 0
   m_Name: Imp (1)
   m_TagString: Untagged
@@ -7645,6 +7744,19 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
   m_UseDelaunayMesh: 0
+--- !u!114 &8572319889312134360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4991430047393216989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7763b748d52c7d47b7da957819dfc09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectType: 4
 --- !u!1 &5028847648220743362
 GameObject:
   m_ObjectHideFlags: 0
@@ -11202,6 +11314,7 @@ GameObject:
   - component: {fileID: 8433189632769598560}
   - component: {fileID: 9118991521093386336}
   - component: {fileID: 1585759415873250044}
+  - component: {fileID: 1026126275892502263}
   m_Layer: 0
   m_Name: upsideObstacle (2)
   m_TagString: Untagged
@@ -11325,6 +11438,19 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
   m_UseDelaunayMesh: 0
+--- !u!114 &1026126275892502263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7274739548443295204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7763b748d52c7d47b7da957819dfc09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectType: 4
 --- !u!1 &7429037148559353529
 GameObject:
   m_ObjectHideFlags: 0
@@ -12652,6 +12778,7 @@ GameObject:
   - component: {fileID: 4938317424594046077}
   - component: {fileID: 8324356601397055956}
   - component: {fileID: 6369685243686075152}
+  - component: {fileID: 8184182390566949360}
   m_Layer: 0
   m_Name: GoldSword
   m_TagString: Untagged
@@ -12775,6 +12902,19 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
   m_UseDelaunayMesh: 0
+--- !u!114 &8184182390566949360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8487651680438323706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7763b748d52c7d47b7da957819dfc09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objectType: 4
 --- !u!1 &8715023142083441476
 GameObject:
   m_ObjectHideFlags: 0
