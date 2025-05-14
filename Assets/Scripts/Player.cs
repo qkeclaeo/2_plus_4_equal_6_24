@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UIElements;
 
 public abstract class Player : MonoBehaviour
 {
@@ -115,14 +116,14 @@ public abstract class Player : MonoBehaviour
 
     protected float _originalColliderSize;
 
-    protected bool _isJump = false;
-    protected bool _canJump = true;
+    protected bool _isJump = false; //플레이어의 점프 상태값
+    protected bool _canJump = true; //플레이어의 점프 가능 상태값
 
-    protected bool _isSlideInput = false;
-    protected bool _isSliding = false;
+    protected bool _isSlideInput = false; //플레이어의 슬라이딩 입력을 읽는 값
+    protected bool _isSliding = false; //플레이어의 슬라이딩 상태값
 
-    public bool _isInvincible = false;
-    protected bool _isStun = false;
+    public bool _isInvincible = false; //플레이어 무적 상태값
+    protected bool _isStun = false; //플레이어 기절 상태값
 
     void OnEnable()
     {
@@ -148,12 +149,12 @@ public abstract class Player : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (!GameManager.Instance.IsReadyToStart)
+        if (!GameManager.Instance.IsReadyToStart) //게임매니저에서 게임이 시작되었을 때 활성화 되는 값
         {
             return;
         }
 
-        if (_isInvincible)
+        if (_isInvincible) //무적 시간 처리
         {
             _invincibleCooldown -= Time.deltaTime;
             if (_invincibleCooldown <= 0)
@@ -163,7 +164,7 @@ public abstract class Player : MonoBehaviour
             }
         }
 
-        if (!_isStun)
+        if (!_isStun) //기절시 조작 불가 처리
         {
             if (_canJump && Input.GetKeyDown(KeyCode.Space))
             {
@@ -183,7 +184,8 @@ public abstract class Player : MonoBehaviour
             return;
         }
 
-            Vector3 velocity = _rigidbody.velocity;
+        Vector3 velocity = _rigidbody.velocity;
+
         switch (_isStun)
         {
             case false:
@@ -317,21 +319,21 @@ public abstract class Player : MonoBehaviour
         Tilemap tilemap = collision.gameObject.GetComponent<Tilemap>();
         Object collisionObject = collision.GetComponent<Object>();
 
-        bool isObstacle =
-            (
+        if (
             collisionObject.ObjectType == ObjectType.NormalObstacle ||
             collisionObject.ObjectType == ObjectType.Arrow ||
             collisionObject.ObjectType == ObjectType.EndPoint
-            );
+            )
+            return;
 
-        if (tilemap != null && !isObstacle)
+        if (tilemap != null)
         {
             Vector3 hitPoint = collision.ClosestPoint(transform.position);
             Vector3Int cellPosition = tilemap.WorldToCell(hitPoint);
             if (tilemap.HasTile(cellPosition))
                 tilemap.SetTile(cellPosition, null);
         }
-        else if(!isObstacle)
+        else
         {
             collision.gameObject.SetActive(false);
         }
