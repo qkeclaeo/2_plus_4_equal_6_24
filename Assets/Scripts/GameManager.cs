@@ -81,10 +81,6 @@ public class GameManager : MonoBehaviour
             Camera.main.GetComponent<FollowCamera>().Init(Player.transform);
             _isCameraSet = true;
         }
-        if (SpawnManager.Instance.IsInfinite)
-        {
-            SpawnManager.Instance.Init();
-        }
 
         IsReadyToStart = true;
         UIManager.Instance.StartGame();
@@ -93,6 +89,7 @@ public class GameManager : MonoBehaviour
     public void StartInfiniteMode()
     {
         SpawnManager.Instance.SetInfiniteMode(true);
+        SpawnManager.Instance.Init();
         StartGame();
     }
 
