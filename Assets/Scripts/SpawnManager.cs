@@ -59,7 +59,7 @@ public class SpawnManager : MonoBehaviour
             nextPosX += offsetX;
         }
     }
-    public void GameOver()
+    void GameOver()
     {
         foreach (var obj in mapsQueue)
         {
@@ -68,6 +68,10 @@ public class SpawnManager : MonoBehaviour
     }
     public void SetInfiniteMode(bool istrue)
     {
+        if (!istrue)
+        {
+            GameOver();
+        }
         IsInfinite = istrue;
     }
     void ShuffleIndex()

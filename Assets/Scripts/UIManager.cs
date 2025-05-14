@@ -87,4 +87,9 @@ public class UIManager : MonoBehaviour
     {
         ChangeState(UIState.StageSelect);
     }
+
+    public void ShowHomeUI()
+    {
+        ChangeState(UIState.Home);
+    }
 }

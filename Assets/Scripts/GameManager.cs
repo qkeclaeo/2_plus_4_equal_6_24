@@ -90,6 +90,10 @@ public class GameManager : MonoBehaviour
     {
         SpawnManager.Instance.SetInfiniteMode(true);
         SpawnManager.Instance.Init();
+        if (_curStage != null)
+        {
+            Destroy(_curStage);
+        }
         StartGame();
     }
 
@@ -111,6 +115,7 @@ public class GameManager : MonoBehaviour
     {
         IsReadyToStart = false;
         _isGameOver = true;
+        _isCameraSet = false;
         if (MaxScore < CurScore)
         {
             MaxScore = CurScore;

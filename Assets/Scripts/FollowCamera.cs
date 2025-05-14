@@ -5,8 +5,13 @@ using UnityEngine;
 public class FollowCamera : MonoBehaviour
 {
     Transform _target;
+    Vector3 originPos;
     float _offsetX;
 
+    private void Start()
+    {
+        originPos = transform.position;
+    }
 
     public void Init(Transform target)
     {
@@ -15,6 +20,7 @@ public class FollowCamera : MonoBehaviour
             return;
 
         _target = target;
+        transform.position = originPos;
         _offsetX = transform.position.x - _target.position.x;
     }
 
