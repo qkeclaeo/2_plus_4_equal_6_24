@@ -4,24 +4,16 @@ using UnityEngine.Tilemaps;
 
 public class SpawnManager : MonoBehaviour
 {
-
-    [SerializeField] private float offsetX;
-    float nextPosX = 0f;
     public static SpawnManager Instance { get; private set; }
 
-    public GameObject[] mapPrefabs;
-
-    public Transform spawnPoint;
-    //    private Transform lastMapPos = null;
-
-    Queue<GameObject> mapsQueue;
-    //List<GameObject> mapsPool;
-    List<int> prefabIndex;
-
-    [SerializeField] int mapCount = 0;
-
+    [SerializeField] private float offsetX;
+    [SerializeField] private GameObject[] mapPrefabs;
     public bool IsInfinite { get; private set; }
 
+    Queue<GameObject> mapsQueue;
+    List<int> prefabIndex;
+    float nextPosX = 0f;
+    int mapCount = 0;
 
     private void Awake()
     {
@@ -95,10 +87,8 @@ public class SpawnManager : MonoBehaviour
         if (collision.CompareTag("Map"))
         {
             ++mapCount;
-            Debug.Log("mapCount:" + mapCount);
             if (mapCount >= mapPrefabs.Length)
             {
-                Debug.Log("재배치");
                 List<GameObject> temp = new List<GameObject>();
                 for (int i = 0; i < mapPrefabs.Length; ++i)
                 {
