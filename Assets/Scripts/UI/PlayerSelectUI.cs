@@ -27,7 +27,7 @@ public class PlayerSelectUI : BaseUI
         return UIState.PlayerSelect;
     }
 
-    public override void Init()
+    private void Start()
     {
         _players = FindObjectsOfType<Player>();
         _playerObjects = new GameObject[_players.Length];

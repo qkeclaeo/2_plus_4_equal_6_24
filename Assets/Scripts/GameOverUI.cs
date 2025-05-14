@@ -17,7 +17,10 @@ public class GameOverUI : BaseUI
         {
             GameManager.Instance.Restart();
         });
+    }
 
+    public override void OnChangedState()
+    {
         _curScoreText.text = "Cur Score: " + GameManager.Instance.CurScore.ToString();
         _maxScoreText.text = "Max Score: " + GameManager.Instance.MaxScore.ToString();
     }
