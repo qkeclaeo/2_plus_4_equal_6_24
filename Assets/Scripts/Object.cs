@@ -1,4 +1,7 @@
+using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
+using UnityEngine.Tilemaps;
 
 public enum ObjectType
 {
@@ -19,18 +22,20 @@ public class Object : MonoBehaviour
     public string ObjectName { get => _objectName; }
 
     Player player;
+    Tilemap tilemap;
+    Dictionary<Vector3Int, TileBase> removedTiles = new Dictionary<Vector3Int, TileBase>();
 
     private void Start()
     {
-        player = GetComponent<Player>();        
+        tilemap = GetComponent<Tilemap>();
         _objectName = gameObject.name;
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (!collider.CompareTag("Player")) return;
+
         player = collider.GetComponent<Player>();
-        Debug.Log("Triggered");
         switch (_objectType)
         {
             case ObjectType.Coin:
@@ -76,6 +81,31 @@ public class Object : MonoBehaviour
                     Debug.Log("Item");
                 }
                 break;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (!collision.CompareTag("Player")) return;
+        if (tilemap != null)
+        {
+            Vector3 hitPoint = collision.ClosestPoint(collision.transform.position);
+            Vector3Int cellPosition = tilemap.WorldToCell(hitPoint);
+            TileBase tile = tilemap.GetTile(cellPosition); //여기서 타일베이스로 정하고
+            if (tile != null)
+            {
+                removedTiles[cellPosition] = tile;
+                tilemap.SetTile(cellPosition, null);
+            }
+        }
+    }
+
+    public void RestoreTiles()
+    {
+        foreach (var rmt in removedTiles)
+        {
+            Debug.LogError($"복구된 타일{rmt.Key}, {rmt.Value}");
+            tilemap.SetTile(rmt.Key, rmt.Value);
         }
     }
 

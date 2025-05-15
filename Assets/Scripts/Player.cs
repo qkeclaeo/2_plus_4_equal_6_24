@@ -308,36 +308,4 @@ public abstract class Player : MonoBehaviour
     {
         GameManager.Instance.GameOver();
     }
-
-    private void OnTriggerStay2D(Collider2D collision) //플레이어 오브젝트 충돌 로직
-    {
-        if (!GameManager.Instance.IsReadyToStart)
-        {
-            return;
-        }
-
-        if (!collision.CompareTag("Object")) return;
-
-        Tilemap tilemap = collision.gameObject.GetComponent<Tilemap>();
-        Object collisionObject = collision.GetComponent<Object>();
-
-        if (
-            collisionObject.ObjectType == ObjectType.NormalObstacle ||
-            collisionObject.ObjectType == ObjectType.Arrow ||
-            collisionObject.ObjectType == ObjectType.EndPoint
-            )
-            return;
-
-        if (tilemap != null)
-        {
-            Vector3 hitPoint = collision.ClosestPoint(transform.position);
-            Vector3Int cellPosition = tilemap.WorldToCell(hitPoint);
-            if (tilemap.HasTile(cellPosition))
-                tilemap.SetTile(cellPosition, null);
-        }
-        else
-        {
-            collision.gameObject.SetActive(false);
-        }
-    }
 }

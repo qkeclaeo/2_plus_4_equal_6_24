@@ -53,8 +53,7 @@ public class SpawnManager : MonoBehaviour
         nextPosX = mapCount = 0;
         foreach (var obj in mapsQueue)
         {
-            obj.SetActive(true);
-            ActiveChildObjects(obj);
+            obj.SetActive(true);    
             obj.transform.position = new Vector3(nextPosX, 0, 0);
             nextPosX += offsetX;
         }
@@ -90,10 +89,16 @@ public class SpawnManager : MonoBehaviour
 
         if (collision.CompareTag("Map"))
         {
+            Object[] obj = collision.GetComponentsInChildren<Object>();
+            foreach(var oobj in obj)
+            {
+                oobj.RestoreTiles();
+            }
             ++mapCount;
             if (mapCount >= mapPrefabs.Length)
             {
                 List<GameObject> temp = new List<GameObject>();
+
                 for (int i = 0; i < mapPrefabs.Length; ++i)
                 {
                     temp.Add(mapsQueue.Dequeue());
@@ -102,21 +107,12 @@ public class SpawnManager : MonoBehaviour
 
                 for (int i = 0; i < temp.Count; ++i)
                 {
-                    ActiveChildObjects(temp[prefabIndex[i]]);
                     temp[prefabIndex[i]].transform.position = new Vector3(nextPosX, 0, 0);
                     nextPosX += offsetX;
                     mapsQueue.Enqueue(temp[prefabIndex[i]]);
                 }
                 mapCount = 0;
             }
-        }
-    }
-    void ActiveChildObjects(GameObject obj)
-    {
-        Transform[] childs = obj.GetComponentsInChildren<Transform>(true);
-        foreach (var child in childs)
-        {
-            child.gameObject.SetActive(true);
         }
     }
 }
